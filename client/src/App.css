@@ -1,0 +1,22 @@
+body {
+  font-family:'Lato'
+}
+.TWAW-logo {
+  padding:3px;
+}
+.navbar {
+  background-color:rgb(197, 120, 238)
+}
+.navbar-nav  li  a {padding-top:1px !important; padding-bottom:1px !important;}
+.navbar {min-height:32px !important;}
+
+.btn-start {
+  background-color:rgb(197, 120, 238)
+}
+
+.response {
+  background-color: blueviolet;
+}
+/* div {
+  border:1px solid black;
+} */
