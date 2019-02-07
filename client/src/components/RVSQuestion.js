@@ -2,32 +2,62 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import styled from 'styled-components'
 
-import * as actions from '../Actions/index'
+import * as actions from '../Actions/index';
+
+const initialState = {
+  currentQ: 0,
+  finished: false,
+  choices: {
+    Preference: "",
+    RecoilSensitive: "",
+    WillingToClean: "",
+    FingerStrengthForDbl: "",
+    FiveRoundCapacity: "",
+    CarryInPurse: ""
+  }  
+}
 
 class RVSQuestion extends Component {
   constructor(props) {
     super(props)
     this.state = {
       currentQ: 0,
-      finished: false
+      finished: false,
+      choices: {Preference: "",
+      RecoilSensitive: "",
+      WillingToClean: "",
+      FingerStrengthForDbl: "",
+      FiveRoundCapacity: "",
+      CarryInPurse: ""
+     }  
     }
+    console.log(this.props)
   }
   sendRvSResponse = (resObj) => {
+    //how the user sends their responses to the questions and cycles through the questions
+    let {category, value = ""} = resObj
+    let choice = {}
+    choice[category] = value;
+    let oldChoices = {...this.state.choices}
+    //updates the state with the choice
+    let updatedChoices = {...oldChoices,...choice}
+    this.setState({choices:updatedChoices})
+    //updates the state to the next question and rerenders
     let { currentQ } = this.state
+    
     if (currentQ < this.props.questions.length - 1) {
       this.setState({ currentQ: currentQ + 1 })
     } else {
+      //prevents from trying to read an undefined value and sends the results
       this.setState({ finished: true })
-      console.log(this.state)
+      this.props.sendRvSResponsesAndRecieveAnswer(this.state.choices)   
     }
   }
 
   renderCurrentQuestion = () => {
-    if (!this.state.finished) {
       let { currentQ } = this.state
       let { questions } = this.props
       let { question, id, responses, category } = questions[currentQ]
-      console.log(question)
       return (
         <QuestionContainer className="col-8 ">
           <h4 className="question-text text-center">
@@ -45,7 +75,6 @@ class RVSQuestion extends Component {
           </div>
         </QuestionContainer>
       )
-    }
   }
   render() {
     if (!this.state.finished) {
@@ -55,7 +84,9 @@ class RVSQuestion extends Component {
         </div>
       );
     } else {
-      return <div>Done</div>
+      return (
+        <div></div>
+      )
     }
 
   }
@@ -87,11 +118,11 @@ const QuestionContainer = styled("div")`
 }
 `;
 
-function mapStateToProps({ RvSA }) {
-  return { RvSA };
+function mapStateToProps({ results }) {
+  return { results };
 }
 
 export default connect(
-  mapStateToProps,
+  null,
   actions
 )(RVSQuestion);
