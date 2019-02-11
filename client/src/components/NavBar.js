@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-export default class NavBar extends Component {
+import {Link, BrowserRouter as Router, withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
+class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-nav ">
@@ -23,21 +25,20 @@ export default class NavBar extends Component {
           <span className="navbar-toggler-icon" />
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              
-            </li>
-            <li className="nav-item">
-            </li>
-            <li className="nav-item">
-            </li>
+            <li className="nav-item active" />
+            <li className="nav-item" />
+            <li className="nav-item" />
           </ul>
-          <span className="navbar-text">
-            My Gun Finder
-          </span>
+           <span className="navbar-text">My Gun Finder</span>
         </div>
       </nav>
     );
   }
 }
+
+export default NavBar

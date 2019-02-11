@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as actions from '../Actions'
-import Revolver from './Results/RevolverResult'
-import Semi from './Results/SemiResult'
 
 import RVSQuestion from './RVSQuestion'
 
@@ -26,14 +24,7 @@ export class RevVsSemi extends Component {
     }
   }
 
-  renderRvSResult = () => {
-    console.log(this.props)
-    if(this.props.results.RvS === "Revolver"){
-      return <Revolver/>
-    } else if(this.props.results.RvS === "Semi"){
-      return <Semi />
-    }
-  }
+
 
   render() {
     return (
@@ -47,7 +38,6 @@ export class RevVsSemi extends Component {
         </div>
         <div className="row justify-content-center">
         {this.renderQuestionsWithQuestionComponent()}
-        {this.renderRvSResult()}
         </div>
       </div>
     )

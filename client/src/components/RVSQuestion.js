@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import styled from 'styled-components'
+import RevolverOrSemi from "./Results/RvSResult";
+
 
 import * as actions from '../Actions/index';
 
-const initialState = {
-  currentQ: 0,
-  finished: false,
+const initialChoiceState = {
   choices: {
     Preference: "",
     RecoilSensitive: "",
@@ -31,7 +31,6 @@ class RVSQuestion extends Component {
       CarryInPurse: ""
      }  
     }
-    console.log(this.props)
   }
   sendRvSResponse = (resObj) => {
     //how the user sends their responses to the questions and cycles through the questions
@@ -53,6 +52,19 @@ class RVSQuestion extends Component {
       this.props.sendRvSResponsesAndRecieveAnswer(this.state.choices)   
     }
   }
+  renderRvSResult = () => {
+    let result = this.props.results.RvS
+    if(result){
+    if (result === "Revolver" || result === "Semi") {
+      return <RevolverOrSemi resetQ={this.resetQuestions} result={result} />
+    } 
+  }
+}
+  resetQuestions = () => {
+    this.setState({ choices: initialChoiceState })
+    this.setState({finished:false})
+    this.setState({currentQ:0})
+  }
 
   renderCurrentQuestion = () => {
       let { currentQ } = this.state
@@ -67,8 +79,7 @@ class RVSQuestion extends Component {
             {responses.map(response => {
               let { text, value } = response
               return (
-
-                <button className={`${response}  response btn btn`} onClick={() => this.sendRvSResponse({ id, category, value })}
+                <button className={`${response}  mt-2 response btn btn`} onClick={() => this.sendRvSResponse({ id, category, value })}
                 >{text}</button>
               )
             })}
@@ -85,7 +96,7 @@ class RVSQuestion extends Component {
       );
     } else {
       return (
-        <div></div>
+        <div>{this.renderRvSResult()}</div>
       )
     }
 
@@ -123,6 +134,6 @@ function mapStateToProps({ results }) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(RVSQuestion);

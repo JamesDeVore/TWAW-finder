@@ -1,4 +1,4 @@
-import {  FETCH_RVS_Q, RVS_RESPONSE } from "./types";
+import {  FETCH_RVS_Q, RVS_RESPONSE, RESET_RVS } from "./types";
 
 
 export const fetchRvSQuestions = () => async dispatch => {
@@ -25,4 +25,8 @@ export const sendRvSResponsesAndRecieveAnswer = (userResponseObj) => async dispa
   } else {
     return dispatch({ type: RVS_RESPONSE, payload: "" })
   }
+}
+
+export const resetRvS = () => dispatch => {
+  dispatch({type:RESET_RVS, payload:""})
 }
