@@ -1,5 +1,9 @@
-import {  FETCH_RVS_Q, RVS_RESPONSE, RESET_RVS } from "./types";
+import {  FETCH_RVS_Q, RVS_RESPONSE, RESET_RVS, FETCH_REVOLVER, REVOLVER_RESPONSE } from "./types";
 
+export const fetchRevolverQuestions = () => async dispatch => {
+  let questions = await fetch('/api/revolverQuestions').then(r => r.json());
+  dispatch({ type: FETCH_REVOLVER, payload: questions })
+}
 
 export const fetchRvSQuestions = () => async dispatch => {
   let questions = await fetch('/api/rvsquestions').then(r => r.json());
@@ -29,4 +33,15 @@ export const sendRvSResponsesAndRecieveAnswer = (userResponseObj) => async dispa
 
 export const resetRvS = () => dispatch => {
   dispatch({type:RESET_RVS, payload:""})
+}
+
+export const sendRevolverResultsAndGetResults = (idealRevolverObj) => async dispatch => {
+  let finalCount = await fetch("/api/selectrevolver", {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, cors, *same-origin
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(idealRevolverObj)
+  }).then(r => r.json());
 }

@@ -1,7 +1,10 @@
-const {GunType} = require('../jsonData/QUESTIONS.json')
+const {GunType, Revolver} = require('../jsonData/QUESTIONS.json')
 
 exports.getAllQuestions = (req,res) => {
   res.send(GunType)  
+}
+exports.getRevolverQuestions = (req, res) => {
+  res.send(Revolver)
 }
 
 exports.selectType = (req,res) => {
