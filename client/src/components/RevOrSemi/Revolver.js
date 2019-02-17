@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import * as actions from "../Actions";
+import * as actions from "../../Actions";
 import RevolverQuestions from './RevolverQuestions'
 
 

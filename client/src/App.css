@@ -1,14 +1,45 @@
 body {
-  font-family:'Lato'
+  font-family:'Lato';
+  background-color:rgb(228, 228, 228);
 }
-.TWAW-logo {
-  padding:3px;
+.welcome-banner {
+  margin-bottom:1em;
+}
+.welcome-image-container {
+  width:100%;
+  height:auto;
+}
+.welcome-image {
+  width:100%;
+  height:auto;
+}
+.welcome-banner-text{
+  text-align:center;
+  position: absolute;
+  color:white;
+  font-weight:200;
+  top:25%;
+  left:33%;
+}
+
+.list-group-item{
+  background-color: transparent;
+  font-size:.8em;
+}
+.welcome-box {
+  /* border:1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+            0 2px 4px 0 rgba(0,0,0,0.08);
+  margin-bottom:14px;
+}
+
+.logo{
+  height:1.75em;
 }
 .navbar {
-  background-color:rgb(197, 120, 238)
+  background-color:rgb(197, 120, 238);
+  border-bottom: 4px solid rgb(142, 87, 172)
 }
-.navbar-nav  li  a {padding-top:1px !important; padding-bottom:1px !important;}
-.navbar {min-height:32px !important;}
 
 .btn-start {
   background-color:rgb(197, 120, 238)
