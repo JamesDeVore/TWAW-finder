@@ -58,7 +58,7 @@ export default class RevolverQuestions extends Component {
       )
     } else {
       return (
-        <div>results here</div>
+        <div>results here :)</div>
       )
     }
   }
