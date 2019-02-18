@@ -8,11 +8,13 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "i": "^0.3.6",
     "jwt-simple": "^0.5.5",
     "mongoose": "^5.4.0",
     "mongoose-unique-array": "^0.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
+    "npm": "^6.8.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
@@ -20,7 +22,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",

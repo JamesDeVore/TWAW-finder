@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Link, BrowserRouter as Router, withRouter } from 'react-router-dom'
-import { connect } from 'react-redux'
+import Dropdown from './NavBarDropdown'
 class NavBar extends Component {
   render() {
     return (
@@ -12,7 +11,9 @@ class NavBar extends Component {
             </a>
           </div>
           <div className="navbar-left navbar-text">My Gun Finder</div>
-          <div className="navbar-text">Contact Us!</div>
+          <div className="">
+            <Dropdown /></div>
+          
         </div>
       </nav>
     );
@@ -20,3 +21,4 @@ class NavBar extends Component {
 }
 
 export default NavBar
+
