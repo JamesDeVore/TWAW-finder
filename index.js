@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const router = require("./router");
 const cors = require("cors");
+const path = require("path")
 
 // DB 
 // mongoose.connect(keys.MONGODB_URI);
