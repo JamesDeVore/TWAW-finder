@@ -16,6 +16,7 @@ router(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
+  console.log("ran here")
   app.use(express.static('client/build'));
 
   // Express serve up index.html file if it doesn't recognize route
