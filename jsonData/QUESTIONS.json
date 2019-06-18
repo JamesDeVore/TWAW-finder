@@ -1,338 +1,5 @@
 {
-  "handSize":{
-    "handToGrip":[
-      {
-        "text":"What is your palm length from the base of your palm to the bottom of your middle finger?",
-        "image":"",
-        "responses":[],
-        "category":"PalmLength"
-      },
-      {
-        "text": "With your fingers together, what is the width of your palm?",
-        "image": "",
-        "responses": [],
-        "category":"PalmWidth"
-      }
-    ],
-    "fingerToTrigger":[
-      {
-        "text": "What is your trigger finger Length (trigger finger from thumb web to the center of your outermost fingertip pad?",
-        "image": "",
-        "responses": [],
-        "category":"TriggerFingerLength"
-      }
-    ],
-    "fingerToMagRelease":[
-      {
-        "text": "What is the length of your thumb, from the center of your thumb web to the tip of your thumb?",
-        "image": "",
-        "responses": [],
-        "category": "ThumbLength"
-      }
-    ],
-    "handedness":[
-      {
-        "text": "Are you Right handed or Left handed?",
-        "image": "",
-        "responses": [
-          {
-          "text":"Right handed",
-          "value":"right"
-          },
-          {
-            "text": "Left handed",
-            "value": "left"
-          },
-          {
-            "text": "Unsure / Abidextrious",
-            "value": "null"
-          }
-      ],
-        "category": "Handedness"
-      }
-    ]
-  },
-  "strength": {
-    "triggerPull":[
-      {
-        "text": "How would you rank your trigger finger strength on a scale of 1-4, with 1 being 'spraying a spray bottle can be difficult sometimes', and 4 being 'I can lift a gallon of water with ease with just my trigger finger.'",
-        "image": "",
-        "responses": [
-          {
-            "text":"1",
-            "value":"1"
-          },
-          {
-            "text": "2",
-            "value": "2"
-          },
-          {
-            "text": "3",
-            "value": "3"
-          },
-          {
-            "text": "4",
-            "value": "4"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-       "category": "FingerStrength"
-      }
-    ],
-    "recoilSensitivity":[
-      {
-        "text": "How would you rate your hand strength with 1 being- I have arthritis or or significant weakness in my dominant hand that can inhibit my daily tasks. and 4 being- I have no strength issues with my dominant hand",
-        "image": "",
-        "responses": [
-          {
-            "text":"1",
-            "value":"1"
-          },
-          {
-            "text": "2",
-            "value": "2"
-          },
-          {
-            "text": "3",
-            "value": "3"
-          },
-          {
-            "text": "4",
-            "value": "4"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "HandStrength"
-      },
-      {
-        "text": "How would you rate your upper body strength on a scale of 1 to 4 with 1 being 'I have a very weak upper body', and 4 being 'I have excellent upper body strength.'",
-        "image": "",
-        "responses": [
-          {
-            "text": "1",
-            "value": "1"
-          },
-          {
-            "text": "2",
-            "value": "2"
-          },
-          {
-            "text": "3",
-            "value": "3"
-          },
-          {
-            "text": "4",
-            "value": "4"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "ArmStrength"
-      }
-    ],
-    "maintenance":[
-      {
-        "text": "Are you willing to learn how to take down and clean a gun",
-        "image": "",
-        "responses": [
-          {
-            "text":"Yes",
-            "value":"yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "Maintenance"
-      }
-    ],
-    "budget":[
-      {
-        "text": "What will your budget allow for you to spend on the right gun for self-defense?",
-        "image": "",
-        "responses": [
-          {
-            "text":"",
-            "value":""
-          },
-          {
-            "text": "",
-            "value": ""
-          },
-          {
-            "text": "",
-            "value": ""
-          },
-          {
-            "text": "",
-            "value": ""
-          },
-          {
-            "text": "",
-            "value": ""
-          },
-          {
-            "text": "",
-            "value": ""
-          }
-        ],
-        "category": "Budget"
-      }
-    ],
-    "methodOfCarry":[
-      {
-        "text": "Do you have a reason you are not willing to or are not physically able to carry a gun on your person",
-        "image": "",
-        "responses": [
-          {
-            "text": "Yes",
-            "value": "yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "Carry"
-      },
-      {
-        "text": "",
-        "image": "",
-        "responses": [],
-        "category": ""
-      }
-    ],
-    "features":[
-      {
-        "text": "Would require a gun with an external thumb safety?",
-        "image": "",
-        "responses": [
-          {
-            "text": "Yes",
-            "value": "yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "ExternalSafety"
-      },
-      {
-        "text": "Do you require a gun with a laser?",
-        "image": "",
-        "responses": [
-          {
-            "text": "Yes",
-            "value": "yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "Laser"
-      },
-      {
-        "text": "Do you require a gun that comes already equipped with a laser?",
-        "image": "",
-        "responses": [
-          {
-            "text": "Yes",
-            "value": "yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "StandardLaser"
-      },
-      {
-        "text": "Do require a gun with an accessory rail (picatinny rail) to attach aftermarket accessories such as flashlights and/or lasers?",
-        "image": "",
-        "responses": [
-          {
-            "text": "Yes",
-            "value": "yes"
-          },
-          {
-            "text": "No",
-            "value": "no"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": "AccessoryRail"
-      },
-      {
-        "text": "At this time, do you require a specific caliber for your gun. Are you open to different calibers?",
-        "image": "",
-        "responses": [
-          {
-            "text":".22",
-            "value":".22"
-          },
-          {
-            "text": ".380",
-            "value": ".380"
-          },
-          {
-            "text": "9mm",
-            "value": "9mm"
-          },
-          {
-            "text": "10mm",
-            "value": "10mm"
-          },
-          {
-            "text": ".40",
-            "value": ".40"
-          },
-          {
-            "text": ".45",
-            "value": ".45"
-          },
-          {
-            "text": "Unsure",
-            "value": "null"
-          }
-        ],
-        "category": ""
-      }
-    ]
-  },
+  
   "final":[
     {
       "text":"What will this gun be used for?",
@@ -350,7 +17,8 @@
           "text":"Unsure",
           "value":"null"
         }
-      ]
+      ],
+      "category":"purpose"
     },
     {
       "text": "Are you Right handed or Left handed?",
@@ -585,25 +253,97 @@
     {
       "text": "What is your palm length from the base of your palm to the bottom of your middle finger?",
       "image": "",
-      "responses": [],
+      "responses": [
+        {
+          "text": "0 - 2.5\"",
+          "value": "0"
+        },
+        {
+          "text": "2.6 - 3\"",
+          "value": "1"
+        },
+        {
+          "text": "3.1 - 3.5\"",
+          "value": "2"
+        },
+        {
+          "text": "3.6\" +",
+          "value": "3"
+        }        
+      ],
       "category": "PalmLength"
     },
     {
       "text": "With your fingers together, what is the width of your palm?",
       "image": "",
-      "responses": [],
+      "responses": [
+        {
+          "text": "0 - 2.5\"",
+          "value": "0"
+        },
+        {
+          "text": "2.6 - 3\"",
+          "value": "1"
+        },
+        {
+          "text": "3.1 - 3.5\"",
+          "value": "2"
+        },
+        {
+          "text": "3.6\" +",
+          "value": "3"
+        }  
+      ],
       "category": "PalmWidth"
     },
     {
       "text": "What is your trigger finger Length (trigger finger from thumb web to the center of your outermost fingertip pad?",
       "image": "",
-      "responses": [],
+      "responses": [
+                {
+          "text": "0 - 2.5\"",
+          "value": "0"
+        },
+        {
+          "text": "2.6 - 3\"",
+          "value": "1"
+        },
+        {
+          "text": "3.1 - 3.5\"",
+          "value": "2"
+        },
+        {
+          "text": "3.6 - 4\"",
+          "value": "3"
+        },
+        {
+          "text": "4\" +",
+          "value": "3"
+        }  
+      ],
       "category": "TriggerFingerLength"
     },
     {
       "text": "What is the length of your thumb, from the center of your thumb web to the tip of your thumb?",
       "image": "",
-      "responses": [],
+      "responses": [
+        {
+          "text": "0 - 1.9\"",
+          "value": "0"
+        },
+        {
+          "text": "2.0 - 2.25\"",
+          "value": "1"
+        },
+        {
+          "text": "2.26 - 2.49\"",
+          "value": "2"
+        },
+        {
+          "text": "2.5\" +",
+          "value": "3"
+        }
+      ],
       "category": "ThumbLength"
     },
     {
@@ -611,28 +351,24 @@
       "image": "",
       "responses": [
         {
-          "text": "",
-          "value": ""
+          "text": "$0 - $300",
+          "value": "300"
         },
         {
-          "text": "",
-          "value": ""
+          "text": "$301 - $500",
+          "value": "500"
         },
         {
-          "text": "",
-          "value": ""
+          "text": "$501 - $700",
+          "value": "700"
         },
         {
-          "text": "",
-          "value": ""
+          "text": "$701 - $1000",
+          "value": "1000"
         },
         {
-          "text": "",
-          "value": ""
-        },
-        {
-          "text": "",
-          "value": ""
+          "text": "$1000+",
+          "value": "null"
         }
       ],
       "category": "Budget"
