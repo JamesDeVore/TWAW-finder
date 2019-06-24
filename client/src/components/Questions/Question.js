@@ -13,8 +13,8 @@ export default function Question(props) {
       {answers.map(answer => (
       <button 
         className="btn btn-start"
-        onClick={() =>props.answer(answer,category) }
-        >{answer}</button>
+        onClick={() =>props.answer(answer.value,category) }
+        >{answer.text}</button>
       ))}
       </div>
     </div>
