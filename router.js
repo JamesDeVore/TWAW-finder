@@ -1,5 +1,6 @@
-const Questions = require('./controllers/questions')
+
+const {responseProcessing} = require('./controllers/responseProcessing')
 
 module.exports = function (app) {
-  app.get('/api/questions', Questions.getAllQuestions)
+  app.post('/api/responseProcessing',responseProcessing)
 }
