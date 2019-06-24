@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import questions from "../../assets/questions";
 import Question from "./Question";
+import Result from './Results'
 
 export default class Questions extends Component {
   constructor(props) {
@@ -25,7 +26,8 @@ export default class Questions extends Component {
         accessoryRail:null,
         caliber:null,
         purpose:null
-      }
+      },
+      results:null
     };
   }
   beginQuestions = () => {
@@ -42,11 +44,22 @@ export default class Questions extends Component {
       this.setState({ currentQ: (currentQ += 1) });
     } else {
       //handle end of quiz here
-      this.setState({progress:'end' })
+      this.setState({ progress: "end" });
     }
   };
-  handleSubmit = () => {
-    alert("submit :)")
+  handleSubmit =async () => {
+    alert("submit")
+    let results = await fetch("api/responseProcessing", {
+      method: "POST",
+      body: JSON.stringify(this.state.responses),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+    .then((results) => results.json())
+    debugger;
+    this.setState({results})
   }
   renderIntro() {
     if (this.state.currentQ === null) {
@@ -100,6 +113,17 @@ export default class Questions extends Component {
       </div>
     );
   }
+  renderResults = () => {
+    if(this.state.results.length > 0){
+      return this.state.results.map(gun => (
+        <div className="resultScreen">
+          <Result gun={gun} />
+        </div>
+      ))
+    } else {
+      return <div>Loading</div>
+    }
+  }
   render() {
     switch(this.state.progress){
       case 'before':
@@ -107,7 +131,12 @@ export default class Questions extends Component {
       case 'during':
         return this.renderQuestions()
       case 'end':
+        if(!this.state.results){
         return this.renderSubmit()
+        }
+        else {
+          return this.renderResults();
+        }
     }
   }
 }
