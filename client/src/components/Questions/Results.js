@@ -5,7 +5,7 @@ export default function Results(props) {
   let{gun} = props
   return (
     <div>
-      {gun.Model}
+      Model: {gun.Model}, your score: {gun.score}
     </div>
   )
 }
