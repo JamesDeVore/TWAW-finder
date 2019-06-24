@@ -51,13 +51,33 @@ body {
   font-size:.8em;
 }
 
-.btn-start {
+.responseBtn {
   background-color:rgb(197, 120, 238);
   margin-bottom:10px;
   padding:12px;
   border-bottom:4px solid rgb(142, 87, 172);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
             0 2px 4px 0 rgba(0,0,0,0.08);
+}
+.responseBtn:hover{
+  transform:scale(1.1);
+  transition:transform .2s ease-in-out;
+}
+.questionBox-before{
+  opacity:0
+}
+.questionBox-active{
+  opacity:1;
+  transition: opacity .7s ease-in
+}
+
+.questionText {
+  margin:20px;
+}
+.answersDiv{
+  margin:10px;
+  display:flex;
+  justify-content: space-evenly;
 }
 
 .response {

@@ -41,7 +41,7 @@ class Welcome extends Component {
         </div>
         <div className="row justify-content-center">
         <Link to = "/questions">
-        <button className="btn btn-start">Let's get started!</button>
+        <button className="btn btn-start responseBtn">Let's get started!</button>
         </Link>
         </div>
       </div>

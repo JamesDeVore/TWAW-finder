@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import questions from "../../assets/questions";
 import Question from "./Question";
-import Result from './Results'
+import Result from './Results';
+
 
 export default class Questions extends Component {
   constructor(props) {
@@ -82,7 +83,7 @@ export default class Questions extends Component {
           </div>
           <div className="row justify-content-center">
             <button
-              className="btn btn-start"
+              className="btn btn-secondary"
               onClick={() => this.beginQuestions()}
             >
               Begin
@@ -95,9 +96,13 @@ export default class Questions extends Component {
   renderQuestions = () => {
     let currentQuestion = questions[this.state.currentQ];
     return (
-      <div className="container">
-        <Question question={currentQuestion} answer={this.answerQuestion} />
-      </div>
+        <div className="container">
+          <Question
+            question={currentQuestion}
+            answer={this.answerQuestion}
+            number={this.state.currentQ}
+          />
+        </div>
     );
   };
   renderSubmit = () => {
