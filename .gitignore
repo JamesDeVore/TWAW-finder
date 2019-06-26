@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+/GunData/utils
+/GunData/index
+/GunData/token
+
 # production
 /build
 

@@ -11,75 +11,108 @@ const responseProcessing = async (req,res) => {
   })
   //now to process each gun and give it a score according to the responses
   gunData.forEach(gun => {
+    if(gun["GUN"] === "Question"){
+      gun.disqualified = true;
+      return
+    }
     gun;
-    gun.score = 0;
     gun.disqualified = false;
     idealGun;
     let { budget,
           caliber,
           externalSafety,
           handedness,
+          armStrength,
+          carry,
+          purpose,
           standardLaser,
           fingerStrength,
+          accessoryRail,
           triggerFingerLength,
           thumbLength,
+          palmLength,
+          laser,
           handStrength
     } = idealGun
-    //first, check to make sure it is under the budget
-    if(parseFloat(gun.MSRP) > parseFloat(budget)){
+    //now to cycle through all the criteria
+    
+    if(budget < parseInt(gun["MSRP"])){
       gun.disqualified = true;
-      //stop checking and move on
+      return
+    };
+    if(thumbLength < parseInt(gun["MagazineRelease"])){
+      gun.disqualified = true;
       return
     }
-    //"At this time do you require a specific caliber?"
-    if(caliber === null){
-      //don't have a preference, maybe prioritize lower ones?
-
+    if(triggerFingerLength < parseInt(gun["TriggerLength"])){
+      gun.disqualified = true;
+      return
     }
-    else{
-      if(gun.Caliber !== caliber){
-        //disqualify only if they want one and it doesn't show up
+    if(palmLength < parseInt(gun["PalmWidth"])){
+      gun.disqualified = true;
+      return
+    }
+    if(handedness !== null){
+      handedness = handedness === "Right?"? "no": "yes";
+      if(handedness !== gun["LeftHanded"]){
+        gun.disqualified = true;
+        return
+      }
+    }
+    if(laser !== null){
+      laser = laser ? "yes":"no"
+      if(laser === "yes" && gun["Laser"] === "no"){
+        gun.disqualified = true;
+        return
+      }
+    }
+    if(externalSafety !== null){
+      externalSafety = externalSafety ? "yes":"no"
+      if(externalSafety === "yes" && gun["safety"] === "no"){
+        gun.disqualified = true;
+        return
+      }
+    }
+    if(caliber.length > 0){
+      //only care if there are calibers selected
+      let foundCal = caliber.find(desiredCal => desiredCal === gun.caliber)
+      if(!foundCal){
         gun.disqualified = true;
       }
-  }
-    //"Do you require the gun to have an alternate safety?"
-    if(externalSafety && gun.AlternateSafety === "No"){
-      //they want an alternate, and the gun does not have one available
-      gun.disqualified = true;
-    }
-    //"Do you prefer a gun with a left handed option?"
-    if(handedness == "Left" && gun.LeftHandedOption === "No"){
-      //gun does not have a left handed option
-      gun.disqualified = true;
     } 
-    //"Do you want a gun that comes standard with a laser?"
-    if(standardLaser){
-      //disqualify guns without one
-      if(gun.LaserStd == "No"){gun.disqualified = true;}
+
+    if(armStrength < parseInt(gun["GunWeightUnloaded"])){
+      gun.disqualified = true;
+      return
     }
-    //What is your trigger finger length?
-    if(parseFloat(triggerFingerLength) >= gun.BackstrapToCenter || triggerFingerLength === null){
-      gun.score++;
+    if(carry !== null){
+      carry = carry? "yes":"no";
+      if(carry !== gun["Semi"]){
+        gun.disqualified = true;
+        return
+      }
     }
-    //What is the length of your thumb, from the center of your thumb web to the tip of your thumb?
-    //for mag release
-    if(parseFloat(thumbLength) >= gun.BackstrapToMagRelease || thumbLength === null){
-      gun.score++;
+    if(handStrength < parseInt(gun["Recoil"])){
+      gun.disqualified = true;
+      return
     }
-    //How would you rank your trigger finger strength on a scale of 1-4?
-    if(fingerStrength * 3.125 >= parseFloat(gun.TriggerPull)){
-      gun.score++;
+    if(purpose !== null){
+      purpose = purpose === "Home Defense"? "yes":"no";
+      if(purpose !== gun["HomeDefense"]){
+        gun.disqualified = true;
+        return
+      }
     }
-    if(handStrength * 10.75 >= parseFloat(gun.WeightLoaded)){
-      gun.score++;
+    if(accessoryRail !== null){
+      accessoryRail = accessoryRail ? "yes":"no";
+      if(accessoryRail === "yes" &&  gun["AccessoryRail"] === "no"){
+        //this is currently slightly off because of null values
+        gun.disqualified = true;
+        return
+      }
     }
-    if(handStrength * 2.5 >= parseFloat(gun.SlideTension)){
-      gun.score++;
-    }
-    
-  })
+    })
   let eligibleGuns = gunData.filter(gun => !gun.disqualified);
-  eligibleGuns.sort((a,b) => a.score < b.score? 1:-1);
   eligibleGuns;
   res.send(JSON.stringify(eligibleGuns))
 

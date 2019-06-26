@@ -59,7 +59,6 @@ export default class Questions extends Component {
       }
     })
     .then((results) => results.json())
-    debugger;
     this.setState({results})
   }
   renderIntro() {
@@ -125,6 +124,8 @@ export default class Questions extends Component {
           <Result gun={gun} />
         </div>
       ))
+    } else if(this.state.results.length === 0) {
+      return <div>No results availabke</div>
     } else {
       return <div>Loading</div>
     }

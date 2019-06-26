@@ -44,7 +44,7 @@ const questions = {
   5: {
     id: 5,
     text:
-      "Do you require a gun with an accessory rain to attach aftermarket accessories (such as flashlights and/or lasers)?",
+      "Do you require a gun with an accessory rail to attach aftermarket accessories (such as flashlights and/or lasers)?",
     answers: yesNoUnsure,
     category: "accessoryRail"
   },
@@ -60,7 +60,8 @@ const questions = {
     text:
       "At this time do you require a specific caliber or are you open to different calibers?",
     answers: calibers,
-    category: "caliber"
+    category: "caliber",
+    type:"select"
   },
   8: {
     id: 8,
