@@ -79,12 +79,15 @@ const responseProcessing = async (req,res) => {
       gun.disqualified = true;
       return;
     }
-    if (caliber.length > 0 && caliber.length !== 5) {
-      //only care if there are calibers selected ant not all are selected
-      let foundCal = caliber.find(desiredCal => desiredCal === gun.caliber);
-      if (!foundCal) {
-        gun.disqualified = true;
-        return
+    let unsureCal = caliber.find(selection => selection === "Unsure")
+    if(!unsureCal){
+      if (caliber.length > 0 && caliber.length !== 5) {
+        //only care if there are calibers selected ant not all are selected
+        let foundCal = caliber.find(desiredCal => desiredCal === gun.caliber);
+        if (!foundCal) {
+          gun.disqualified = true;
+          return
+        }
       }
     }
     if(fingerStrength < parseInt(gun["TriggerPull"])){

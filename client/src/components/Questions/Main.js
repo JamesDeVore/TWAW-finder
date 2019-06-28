@@ -91,16 +91,25 @@ export default class Questions extends Component {
       );
     }
   }
+  goBack = () =>{
+    this.setState({ currentQ: (this.state.currentQ -= 1) });
+  } 
   renderQuestions = () => {
     let currentQuestion = questions[this.state.currentQ];
     return (
-        <div className="container">
-          <Question
-            question={currentQuestion}
-            answer={this.answerQuestion}
-            number={this.state.currentQ}
-          />
-        </div>
+      <div className="container">
+        <Question
+          question={currentQuestion}
+          answer={this.answerQuestion}
+          number={this.state.currentQ}
+        />
+        {this.state.currentQ > 0? <button
+          className="btn btn-secondary"
+          onClick={() => this.goBack()}
+        >
+          Back
+        </button>:""}
+      </div>
     );
   };
   renderSubmit = () => {

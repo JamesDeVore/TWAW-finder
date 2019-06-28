@@ -8,12 +8,22 @@ export default class SelectButtons extends Component {
     }
   }
   handleClick = (value) => {
-    let found = this.state.selectedCals.find(cal => value === cal)
+    let {selectedCals} = this.state
+    let found = selectedCals.find(cal => value === cal)
     if(!found){
       //not selected yet
-      this.setState({selectedCals:this.state.selectedCals.concat(value)})
+      if(value === "Unsure"){
+        //de select all but unsure
+        this.setState({selectedCals:["Unsure"]})
+      } else if(selectedCals.find(cal => cal === "Unsure")){
+        this.setState({selectedCals:[value]})
+      }
+        else {
+ 
+        this.setState({selectedCals:selectedCals.concat(value)})
+      }
     } else {
-      this.setState({selectedCals:this.state.selectedCals.filter(cal => cal !== value)})
+      this.setState({selectedCals:selectedCals.filter(cal => cal !== value)})
     }
   }
   renderSelects = () => {

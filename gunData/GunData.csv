@@ -1,72 +1,71 @@
-GUN,MagazineRelease,TriggerLength,TriggerPull,MSRP,PalmWidth,LeftHanded,Laser,safety,caliber,GunWeightUnloaded,Semi,Recoil,HomeDefense ,SlideWeight,AccessoryRail,Image Links,gunID
-Question,"What is the length of your thumb,",What is your trigger finger Length,How would you rank your trigger finger strength,What will your budget allow for y,What is your palm length from the base,Are you Right handed or Left handed?,Do you require a gun with a laser?,Do you require a gun with an external thumb safety?,"At this time, do you require a specific caliber",How would you rate your upper body strength,"Do you have a reason you are not willing , or are not physically able to carry a gun on your body",How would you rate your hand strength,What will this gun be used for?,Slide Weight,Do you require a gun with an accessory rail,,
-Beretta Nano,3,3,2,2,3,no,yes,no,9,2,yes,2,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/beretta-nano-e1492052136806.jpg,1
-Beretta Pico,1,1,3,1,1,yes,no,no,380,4,yes,1,no,4,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/pico_0057.jpg,2
-Bersa Thunder 380 ,2,2,2,1,2,no,no,yes,380,3,yes,3,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/bersa-thunder-e1492052245233.jpg,3
-Charter Arms Pink Lady ,2,2,4,2,2,no,yes,no,0.38,4,no,1,no,null,null,,4
-Charter Arms Undercover Lite,2,2,4,2,2,yes,no,no,0.38,4,no,1,no,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/Pink-Lady-e1492052015593.jpg,5
-Colt Defender,4,4,2,3,4,no,no,yes,9,3,yes,3,yes,1,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/colt-defender.jpg,6
-Colt Mustang ,2,2,2,3,2,no,no,yes,380,3,yes,1,no,1,no,,7
-Glock 19 ,4,4,2,3,4,yes,no,no,9,2,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2019/02/Glock-19_Gen4.png,8
-Glock 26 ,4,4,2,2,4,yes,no,no,9,3,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/glock-g26-e1530802771283.jpg,9
-Glock 43X,3,3,2,2,3,no,no,no,9,2,yes,2,yes,3,no,,10
-Glock 42,2,2,2,2,2,yes,no,no,380,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/glock-42-.jpg,11
-Glock 43,3,3,2,2,3,no,no,no,9,2,yes,2,yes,3,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/glock43-.jpg,12
-H&K VP9,3,3,2,3,3,yes,yes,no,9,1,yes,3,yes,2,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/vp9-e1492053249318.jpg,13
-Kahr CM9 ,2,2,3,1,2,no,no,no,9,2,yes,2,no,4,no,,14
-Kahr CW 380,2,2,2,2,2,no,no,no,380,3,yes,1,no,4,no,,15
-Kahr CW9,2,2,2,2,2,no,no,no,9,2,yes,2,yes,4,no,,16
-Kahr P380,1,1,3,2,1,no,no,no,380,3,yes,1,no,3,no,,17
-Kahr PM9,2,2,2,4,2,no,no,no,9,3,yes,2,no,4,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/kahr-pm9.jpg,18
-Kel Tec P11,1,1,3,2,1,yes,no,no,9,2,yes,2,no,4,no,,19
-Kel Tec P3AT ,1,1,2,2,1,yes,no,no,380,4,yes,1,no,4,no,,20
-Kel Tec PF 9 (we got this info),3,3,4,1,3,yes,no,no,9,3,yes,2,no,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2017/04/gun-revieww-keltec-pf9.jpg,21
-Kimber Micro 380,3,3,1,3,3,yes,yes,yes,380,2,yes,2,no,1,no,,22
-Kimber Micro 9,3,3,2,3,3,yes,yes,yes,9,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2019/04/Kimber-Micro-9-e1551111139287.jpg,23
-Kimber Ultra Carry,4,4,1,4,4,no,yes,yes,9,1,yes,3,yes,3,no,,24
-Ruger EC9,2,2,2,1,2,no,no,yes,9,2,yes,2,no,2,no,,25
-Ruger LC 380,2,2,3,2,2,yes,no,yes,380,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lc380-e1530805533799.jpg,26
-Ruger LC9s,2,2,2,2,2,yes,no,yes,9,2,yes,2,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lc9s-e1530802530600.jpg,27
-Ruger LCP II,1,1,3,1,1,no,yes,no,380,3,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2017/04/gun-review-ruger-lcp-ii--e1530802303584.jpg,28
-Ruger LCR,1,1,3,2,1,no,no,no,0.38,4,no,1,no,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lcr-special-e1492053615197.jpg,29
-Ruger SP101,2,2,4,4,2,no,no,no,0.38,4,no,4,yes,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-sp101-e1492051930444.jpg,30
-Ruger SR22,2,2,1,2,2,no,no,yes,0.22,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/07/ruger-sr22.jpg,31
-Ruger Security 9 Compact,3,3,2,3,3,no,no,yes,9,3,yes,3,yes,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/01/ruger-security-9.jpg,32
-S&W 340 Airlight,1,1,4,4,1,no,yes,no,0.38,4,no,1,no,null,null,,33
-S&W 60 ,1,1,4,4,1,no,no,no,0.38,4,no,2,yes,null,null,,34
-S&W 60 Ladysmith,1,1,3,4,1,no,no,no,0.38,4,no,3,no,null,null,,35
-S&W 642,1,1,4,2,1,no,yes,no,0.38,4,no,2,no,null,null,,36
-S&W Bodyguard 380,2,2,4,2,2,no,yes,yes,380,4,yes,1,no,3,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/2sw-bodyguard-380.jpg,37
-S&W M&P 9 compact,3,3,2,3,3,yes,yes,no,9,2,yes,3,yes,3,yes,,38
-S&W M&P 9 Full size,3,3,2,2,3,yes,no,yes,9,1,yes,4,yes,3,yes,,39
-S&W Shield 9,3,3,3,2,3,yes,yes,yes,9,2,yes,3,yes,4,no,https://thewellarmedwoman.com/wp-content/uploads/2017/05/SW-MP-Shield-e1556564906493.jpg,40
-S&W Shield EZ,2,2,1,2,2,yes,yes,yes,380,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/02/ShieldEZ-e1530803908930.jpg,41
-SCCY CPX1,3,3,3,1,3,no,no,yes,9,3,yes,2,no,3,no,,42
-SCCY CPX2,3,3,3,1,3,no,no,no,9,3,yes,2,no,3,no,,43
-Sig Sauer 1911 Carry Nightmare,4,4,1,5,4,no,no,yes,9,1,yes,4,yes,3,no,,44
-Sig Sauer 1911 Ultra,4,4,1,4,4,no,no,yes,9,1,yes,4,yes,3,no,,45
-Sig Sauer P238,2,2,1,3,2,no,no,yes,380,1,yes,2,no,1,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/p238-1-e1492053754897.jpg,46
-Sig Sauer P320 Subcompact (medium grips),4,4,3,3,4,yes,no,no,9,2,yes,3,yes,4,yes,,47
-Sig Sauer P365,2,2,2,2,2,yes,no,no,9,2,yes,2,yes,2,no,https://thewellarmedwoman.com/wp-content/uploads/2019/02/365-product-on-white-7_1_1.jpg,48
-Sig Sauer P938,2,2,3,3,2,yes,no,yes,9,2,yes,2,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/sig-p938-e1530803026448.jpg,49
-Springfield 1911 Range Officer,4,4,1,4,4,no,no,yes,9,1,yes,4,yes,2,yes,,50
-Springfield 911 .380,2,2,1,3,2,yes,yes,yes,380,1,yes,1,no,1,no,https://thewellarmedwoman.com/wp-content/uploads/2019/02/Springfield-911-380.jpg,51
-Springfield 911 9,2,2,2,3,2,null,yes,yes,9,1,yes,2,no,2,no,,52
-Springfield EMP 1911,4,4,2,3,4,yes,no,yes,9,1,yes,4,yes,3,no,,53
-"Springfield XD(M) 3.8"" 9m  Compact",3,3,1,3,3,yes,no,no,9,2,yes,4,yes,4,yes,,54
-"Springfield XD(M) 4.5"" 45 Full size",3,3,1,3,3,yes,no,no,45,3,yes,4,yes,4,yes,,55
-"Springfield XD(M) 4.5"" 9mm Full size",3,3,1,3,3,yes,no,no,9,2,yes,4,yes,4,yes,,56
-Springfield XD(s) 3.3 45,2,2,3,2,2,yes,no,no,45,4,yes,3,yes,4,yes,,57
-Springfield XD(s) 3.3 9mm,2,2,3,3,2,yes,no,no,9,3,yes,3,no,3,yes,,58
-Walther CCP,3,3,2,2,3,no,no,yes,9,2,yes,3,yes,2,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/11/walther-ccp-m2.jpg,59
-Walther creed,3,3,2,2,3,no,no,no,9,3,yes,4,yes,3,yes,,60
-Walther P22,2,2,1,2,2,yes,no,yes,22,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2017/03/gun-review-smith-wesson-MP22-compact.jpg,61
-Walther PK380,2,2,4,2,2,yes,no,yes,380,4,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/08/Walther_PK380.jpg,62
-Walther PPQ M2,3,3,2,2,3,no,no,no,9,1,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ppq-e1492054592575.jpg,63
-Walther PPS,3,3,2,2,3,no,no,no,9,2,yes,2,no,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/pps-e1530808452208.jpg,64
-Ruger LCR .22,2,2,2,2,,no,no,no,22,2,no,1,no,null,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/gun-review-lcr-22-nancy.jpg,65
-S&W M&P 45,3,3,3,2,,no,yes,yes,45,2,yes,4,yes,3,no,,66
-Kimber Ultra Carry 45,4,4,1,4,4,no,no,yes,9,1,yes,3,yes,4,no,,67
-S&W M&P Shield 45,3,3,3,2,,no,no,yes,45,2,yes,3,yes,4,no,,68
-S&W M&P 22 Compact,2,3,1,2,,Yes,No,Yes,22,1,Yes,1,No,1,Yes,https://thewellarmedwoman.com/wp-content/uploads/2017/03/gun-review-smith-wesson-MP22-compact.jpg,69
-,,,,,,,,,,,,,,,,,70
+GUN,MagazineRelease,TriggerLength,TriggerPull,MSRP,PalmWidth,LeftHanded,Laser,safety,caliber,GunWeightUnloaded,Semi,Recoil,HomeDefense ,SlideWeight,AccessoryRail,Image Links,gunID,Manufacturer,Price,FrameMaterial,ActionType,FinishOptions,Link
+Question,"What is the length of your thumb,",What is your trigger finger Length,How would you rank your trigger finger strength,What will your budget allow for y,What is your palm length from the base,Are you Right handed or Left handed?,Do you require a gun with a laser?,Do you require a gun with an external thumb safety?,"At this time, do you require a specific caliber",How would you rate your upper body strength,"Do you have a reason you are not willing , or are not physically able to carry a gun on your body",How would you rate your hand strength,What will this gun be used for?,Slide Weight,Do you require a gun with an accessory rail,,,,,,,,
+Beretta Nano,3,3,2,2,3,no,yes,no,9,2,yes,2,yes,3,yes,,1,Beretta,450,Polymer,Striker Fire,"Black, Pink, FDE",
+Beretta Pico,1,1,3,1,1,yes,no,no,380,4,yes,1,no,4,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/pico_0057.jpg,2,Beretta,400,Stainess Steel,Double Action Only,Black/Stainless,
+Bersa Thunder 380 ,2,2,2,1,2,no,no,yes,380,3,yes,3,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/bersa-thunder-e1492052245233.jpg,3,Bersa,320,Polymer,Single Action/Double Action,"DuoTone, Matte Black, Satin Nickel",
+Charter Arms Pink Lady ,2,2,4,2,2,no,yes,no,0.38,4,no,1,no,null,null,,4,Charter Arms,437,Alloy,Single Action/Double Action,Pink,
+Charter Arms Undercover Lite,2,2,4,2,2,yes,no,no,0.38,4,no,1,no,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/Pink-Lady-e1492052015593.jpg,5,Charter Arms,#N/A,#N/A,#N/A,#N/A,
+Colt Defender,4,4,2,3,4,no,no,yes,9,3,yes,3,yes,1,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/colt-defender.jpg,6,Colt,973,Aluminum,Single Action Only,Stainless,
+Colt Mustang ,2,2,2,3,2,no,no,yes,380,3,yes,1,no,1,no,,7,Colt,599,Aluminum,Single action only,Stainless,
+Glock 19 ,4,4,2,3,4,yes,no,no,9,2,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2019/02/Glock-19_Gen4.png,8,Glock,#N/A,#N/A,#N/A,#N/A,
+Glock 26 ,4,4,2,2,4,yes,no,no,9,3,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/glock-g26-e1530802771283.jpg,9,Glock,#N/A,#N/A,#N/A,#N/A,
+Glock 43X,3,3,2,2,3,no,no,no,9,2,yes,2,yes,3,no,,10,Glock,#N/A,#N/A,#N/A,#N/A,
+Glock 42,2,2,2,2,2,yes,no,no,380,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/glock-42-.jpg,11,Glock,449.99,Polymer,Striker Fire,"black polymer frame, black steel slide",
+Glock 43,3,3,2,2,3,no,no,no,9,2,yes,2,yes,3,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/glock43-.jpg,12,Glock,529,Polymer,Striker Fire,Black,
+H&K VP9,3,3,2,3,3,yes,yes,no,9,1,yes,3,yes,2,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/vp9-e1492053249318.jpg,13,H&K,#N/A,#N/A,#N/A,#N/A,
+Kahr CM9 ,2,2,3,1,2,no,no,no,9,2,yes,2,no,4,no,,14,Kahr Arms,460,Polymer,Striker Fire,Black / Stainless,
+Kahr CW 380,2,2,2,2,2,no,no,no,380,3,yes,1,no,4,no,,15,Kahr Arms,419,Polymer,Striker Fire,Black / Stainless,
+Kahr CW9,2,2,2,2,2,no,no,no,9,2,yes,2,yes,4,no,,16,Kahr Arms,449,Polymer,Striker Fire,black / stainless,
+Kahr P380,1,1,3,2,1,no,no,no,380,3,yes,1,no,3,no,,17,Kahr,667,Polymer,Double Action Only,black/stainless,
+Kahr PM9,2,2,2,4,2,no,no,no,9,3,yes,2,no,4,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/kahr-pm9.jpg,18,Kahr Arms,810,Polymer,Striker Fire,black on black or black and stainless,
+Kel Tec P11,1,1,3,2,1,yes,no,no,9,2,yes,2,no,4,no,,19,Kel Tec,347.27,Aluminum,Double Action Only,blued/black,
+Kel Tec P3AT ,1,1,2,2,1,yes,no,no,380,4,yes,1,no,4,no,,20,Kel Tec,338.18,Aluminum,Double Action Only,black/black; black/stainless,
+Kel Tec PF 9 (we got this info),3,3,4,1,3,yes,no,no,9,3,yes,2,no,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2017/04/gun-revieww-keltec-pf9.jpg,21,Kel Tec,#N/A,#N/A,#N/A,#N/A,
+Kimber Micro 380,3,3,1,3,3,yes,yes,yes,380,2,yes,2,no,1,no,,22,Kimber,#N/A,#N/A,#N/A,#N/A,
+Kimber Micro 9,3,3,2,3,3,yes,yes,yes,9,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2019/04/Kimber-Micro-9-e1551111139287.jpg,23,Kimber,#N/A,#N/A,#N/A,#N/A,
+Kimber Ultra Carry,4,4,1,4,4,no,yes,yes,9,1,yes,3,yes,3,no,,24,Kimber,919,Aluminum,Single Action Only,Blued,
+Ruger EC9,2,2,2,1,2,no,no,yes,9,2,yes,2,no,2,no,,25,Ruger,#N/A,#N/A,#N/A,#N/A,
+Ruger LC 380,2,2,3,2,2,yes,no,yes,380,2,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lc380-e1530805533799.jpg,26,Ruger,449,Polymer,Double Action Only,black/blued,
+Ruger LC9s,2,2,2,2,2,yes,no,yes,9,2,yes,2,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lc9s-e1530802530600.jpg,27,Ruger,449,Polymer,Striker Fire,black/blued,
+Ruger LCP II,1,1,3,1,1,no,yes,no,380,3,yes,1,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2017/04/gun-review-ruger-lcp-ii--e1530802303584.jpg,28,Ruger,#N/A,#N/A,#N/A,#N/A,
+Ruger LCR,1,1,3,2,1,no,no,no,0.38,4,no,1,no,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-lcr-special-e1492053615197.jpg,29,Ruger,545,Steel,Double Action Only,"Matte black synergistic hard coat, Ionbond diamondblack",
+Ruger SP101,2,2,4,4,2,no,no,no,0.38,4,no,4,yes,null,null,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ruger-sp101-e1492051930444.jpg,30,Ruger ,679,Stainless Steel,Double Action Only,Stainless,
+Ruger SR22,2,2,1,2,2,no,no,yes,0.22,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/07/ruger-sr22.jpg,31,Ruger,449,Polymer,Single Action/Double Action,"black anodize, silver anodize, black anodize, black anodize with threaded barrel",
+Ruger Security 9 Compact,3,3,2,3,3,no,no,yes,9,3,yes,3,yes,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/01/ruger-security-9.jpg,32,Ruger,#N/A,#N/A,#N/A,#N/A,
+S&W 340 Airlight,1,1,4,4,1,no,yes,no,0.38,4,no,1,no,null,null,,33,Smith and Wesson,1019,Scandium,Double Action Only,Blued,
+S&W 60 ,1,1,4,4,1,no,no,no,0.38,4,no,2,yes,null,null,,34,Smith and Wesson,729,Stainless Steel,Single Action/Double Action,Matte Stainless,
+S&W 60 Ladysmith,1,1,3,4,1,no,no,no,0.38,4,no,3,no,null,null,,35,Smith and Wesson,759,Stainless Steel,Single Action/Double Action,Stainless,
+S&W 642,1,1,4,2,1,no,yes,no,0.38,4,no,2,no,null,null,,36,Smith and Wesson,469,Aluminum Alloy,Double Action Only,Stainless,
+S&W Bodyguard 380,2,2,4,2,2,no,yes,yes,380,4,yes,1,no,3,no,https://thewellarmedwoman.com/wp-content/uploads/2016/08/2sw-bodyguard-380.jpg,37,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+S&W M&P 9 compact,3,3,2,3,3,yes,yes,no,9,2,yes,3,yes,3,yes,,38,Smith and Wesson,569,Polymer,Striker Fire,Black,
+S&W M&P 9 Full size,3,3,2,2,3,yes,no,yes,9,1,yes,4,yes,3,yes,,39,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+S&W Shield 9,3,3,3,2,3,yes,yes,yes,9,2,yes,3,yes,4,no,https://thewellarmedwoman.com/wp-content/uploads/2017/05/SW-MP-Shield-e1556564906493.jpg,40,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+S&W Shield EZ,2,2,1,2,2,yes,yes,yes,380,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/02/ShieldEZ-e1530803908930.jpg,41,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+SCCY CPX1,3,3,3,1,3,no,no,yes,9,3,yes,2,no,3,no,,42,Sccy Industries,334,Polymer,Double Action Only,Black,
+SCCY CPX2,3,3,3,1,3,no,no,no,9,3,yes,2,no,3,no,,43,Sccy Industries,314,Polymer,Double Action Only,Black,
+Sig Sauer 1911 Carry Nightmare,4,4,1,5,4,no,no,yes,9,1,yes,4,yes,3,no,,44,Sig Sauer,#N/A,#N/A,#N/A,#N/A,
+Sig Sauer 1911 Ultra,4,4,1,4,4,no,no,yes,9,1,yes,4,yes,3,no,,45,Sig Sauer,#N/A,#N/A,#N/A,#N/A,
+Sig Sauer P238,2,2,1,3,2,no,no,yes,380,1,yes,2,no,1,no,https://thewellarmedwoman.com/wp-content/uploads/2016/09/p238-1-e1492053754897.jpg,46,Sig Sauer,#N/A,#N/A,#N/A,#N/A,
+Sig Sauer P320 Subcompact (medium grips),4,4,3,3,4,yes,no,no,9,2,yes,3,yes,4,yes,,47,Sig Sauer,#N/A,#N/A,#N/A,#N/A,
+Sig Sauer P365,2,2,2,2,2,yes,no,no,9,2,yes,2,yes,2,no,https://thewellarmedwoman.com/wp-content/uploads/2019/02/365-product-on-white-7_1_1.jpg,48,Sig Sauer,#N/A,#N/A,#N/A,#N/A,
+Sig Sauer P938,2,2,3,3,2,yes,no,yes,9,2,yes,2,no,2,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/sig-p938-e1530803026448.jpg,49,Sig Sauer,799,Alloy,Single Action Only,"Black, Stainess, Two-Toned",
+Springfield 1911 Range Officer,4,4,1,4,4,no,no,yes,9,1,yes,4,yes,2,yes,,50,Springfield Armory,720,Alloy,Single Action Only,Blued,
+Springfield 911 .380,2,2,1,3,2,yes,yes,yes,380,1,yes,1,no,1,no,https://thewellarmedwoman.com/wp-content/uploads/2019/02/Springfield-911-380.jpg,51,Springfield Armory,#N/A,#N/A,#N/A,#N/A,
+Springfield 911 9,2,2,2,3,2,null,yes,yes,9,1,yes,2,no,2,no,,52,Springfield Armory,#N/A,#N/A,#N/A,#N/A,
+Springfield EMP 1911,4,4,2,3,4,yes,no,yes,9,1,yes,4,yes,3,no,,53,Springfield Armory,1199.99,Alloy,Single Action Only,Two-Toned,
+"Springfield XD(M) 3.8"" 9m  Compact",3,3,1,3,3,yes,no,no,9,2,yes,4,yes,4,yes,,54,Springfield Armory,649.99,Polymer,Striker Fire,Black,
+"Springfield XD(M) 4.5"" 45 Full size",3,3,1,3,3,yes,no,no,45,3,yes,4,yes,4,yes,,55,Springfield Armory,#N/A,#N/A,#N/A,#N/A,
+"Springfield XD(M) 4.5"" 9mm Full size",3,3,1,3,3,yes,no,no,9,2,yes,4,yes,4,yes,,56,Springfield Armory,#N/A,#N/A,#N/A,#N/A,
+Springfield XD(s) 3.3 45,2,2,3,2,2,yes,no,no,45,4,yes,3,yes,4,yes,,57,Springfield Armory,599,Polymer,Striker Fire,"Black, Black / Stainless",
+Springfield XD(s) 3.3 9mm,2,2,3,3,2,yes,no,no,9,3,yes,3,no,3,yes,,58,Springfield Armory,599,Polymer,Striker Fire,"Black, Black / Stainless",
+Walther CCP,3,3,2,2,3,no,no,yes,9,2,yes,3,yes,2,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/11/walther-ccp-m2.jpg,59,Walther,489,Polymer,Striker Fire,"stainless, Cerakote black",
+Walther creed,3,3,2,2,3,no,no,no,9,3,yes,4,yes,3,yes,,60,Walther,#N/A,#N/A,#N/A,#N/A,
+Walther P22,2,2,1,2,2,yes,no,yes,22,1,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2017/03/gun-review-smith-wesson-MP22-compact.jpg,61,Walther,319,Steel,Single Action/Double Action,black or nickel,
+Walther PK380,2,2,4,2,2,yes,no,yes,380,4,yes,2,no,1,yes,https://thewellarmedwoman.com/wp-content/uploads/2018/08/Walther_PK380.jpg,62,Walther,419.99,Steel,Single Action/Double Action,"Black, Nickel",
+Walther PPQ M2,3,3,2,2,3,no,no,no,9,1,yes,3,yes,3,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/ppq-e1492054592575.jpg,63,Walther,#N/A,#N/A,#N/A,#N/A,
+Walther PPS,3,3,2,2,3,no,no,no,9,2,yes,2,no,4,yes,https://thewellarmedwoman.com/wp-content/uploads/2016/09/pps-e1530808452208.jpg,64,Walther,662,Polymer,Striker Fire,Black,
+Ruger LCR .22,2,2,2,2,,no,no,no,22,2,no,1,no,null,no,https://thewellarmedwoman.com/wp-content/uploads/2016/07/gun-review-lcr-22-nancy.jpg,65,Ruger,#N/A,#N/A,#N/A,#N/A,
+S&W M&P 45,3,3,3,2,,no,yes,yes,45,2,yes,4,yes,3,no,,66,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+Kimber Ultra Carry 45,4,4,1,4,4,no,no,yes,9,1,yes,3,yes,4,no,,67,Kimber,#N/A,#N/A,#N/A,#N/A,
+S&W M&P Shield 45,3,3,3,2,,no,no,yes,45,2,yes,3,yes,4,no,,68,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
+S&W M&P 22 Compact,2,3,1,2,,Yes,No,Yes,22,1,Yes,1,No,1,Yes,https://thewellarmedwoman.com/wp-content/uploads/2017/03/gun-review-smith-wesson-MP22-compact.jpg,69,Smith and Wesson,#N/A,#N/A,#N/A,#N/A,
