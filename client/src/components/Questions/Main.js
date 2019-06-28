@@ -49,7 +49,6 @@ export default class Questions extends Component {
     }
   };
   handleSubmit =async () => {
-    alert("submit")
     let results = await fetch("api/responseProcessing", {
       method: "POST",
       body: JSON.stringify(this.state.responses),

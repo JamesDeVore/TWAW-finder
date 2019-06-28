@@ -12,7 +12,7 @@ export default function Results(props) {
         <img src={gun["Image Links"]} className="gunImage" alt=""/>
         <div className="gunStats">
           <ul>
-            <li>stat</li>
+            <li>Caliber: {gun.caliber}</li>
             <li>stat</li>
             <li>stat</li>
           </ul>
