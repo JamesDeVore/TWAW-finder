@@ -29,8 +29,8 @@ export default class Questions extends Component {
         purpose:null
       },
       results:null
-    };
-  }
+                    };
+                  }
   beginQuestions = () => {
     this.setState({ progress: 'during', currentQ:0 });
   };
@@ -118,13 +118,17 @@ export default class Questions extends Component {
     );
   }
   renderResults = () => {
-    if(this.state.results.length > 0){
-      return this.state.results.map(gun => (
+    let {results} = this.state
+    if(results.length > 0){
+      return (<div>
+        <h1>Here are your results! we found {results.length} gun(s)
+        </h1>{results.map(gun => (
         <div className="resultScreen">
           <Result gun={gun} />
+        </div>))}
         </div>
-      ))
-    } else if(this.state.results.length === 0) {
+      )
+    } else if(results.length === 0) {
       return <div>No results availabke</div>
     } else {
       return <div>Loading</div>

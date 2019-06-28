@@ -4,7 +4,7 @@ import SelectButtons from './answerTypes/Select'
 
 //given a question object, just render the question
 export default function Question(props) {
-  let {question:{text,answers,category,type},number} = props
+  let {question:{text,answers,category,type,image},number} = props
   console.log(type)
   setTimeout(() => {
     document.querySelector(".questionBox-before").classList.add("questionBox-active");
@@ -33,16 +33,17 @@ export default function Question(props) {
       )));
     }
   }
-
+  console.log(image)
   return (
     <div className="row justify-content-center questionBox-before">
       <div className="col-md-10 questionText">
         <h2>Question #{number + 1}</h2>
-      <h1>{text}</h1>
+        <h1>{text}</h1>
       </div>
-      <div className="col-md-8 answersDiv">
-      {allAnswers()}
+      <div className="col-md-8 answersDiv">{allAnswers()}</div>
+      <div className="col-md-8">
+        <img src={image} />
       </div>
     </div>
-  )
+  );
 }

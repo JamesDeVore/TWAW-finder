@@ -1,4 +1,10 @@
 import answers from './answers'
+const laser = require('./questionImages/laser.png');
+const palmLength = require('./questionImages/palmLength.png')
+const palmWidth = require('./questionImages/palmWidth.png')
+const picatinnyRail = require('./questionImages/picatinnyRail.jpg')
+const thumbSafety = require('./questionImages/thumbSafety.png')
+const triggerFinger = require('./questionImages/triggerFinger.png') 
 let { 
     yesNoUnsure,
     scale,
@@ -26,13 +32,15 @@ const questions = {
     id: 2,
     text: "Do you require a gun with an external gun safety?",
     answers: yesNoUnsure,
-    category: "externalSafety"
+    category: "externalSafety",
+    image:thumbSafety
   },
   3: {
     id: 3,
     text: "Do you require a gun with a laser?",
     answers: yesNoUnsure,
-    category: "laser"
+    category: "laser",
+    image:laser
   },
   4: {
     id: 4,
@@ -46,7 +54,8 @@ const questions = {
     text:
       "Do you require a gun with an accessory rail to attach aftermarket accessories (such as flashlights and/or lasers)?",
     answers: yesNoUnsure,
-    category: "accessoryRail"
+    category: "accessoryRail",
+    image:picatinnyRail
   },
   6: {
     id: 6,
@@ -89,20 +98,23 @@ const questions = {
     text:
       "What is your palm length from the base of your palm to the bottom of your middle finger?",
     answers: palmRanges,
-    category: "palmLength"
+    category: "palmLength",
+    image:palmLength
   },
   12: {
     id: 12,
     text: "With your fingers together, what is the width of your palm",
     answers: palmRanges,
-    category: "palmWidth"
+    category: "palmWidth",
+    image:palmWidth
   },
   13: {
     id: 13,
     text:
       "What is your trigger finger Length (trigger finger from thumb web to the center of your outermost fingertip pad?",
     answers: triggerFingerRanges,
-    category: "triggerFingerLength"
+    category: "triggerFingerLength",
+    image:triggerFinger
   },
   14: {
     id: 14,

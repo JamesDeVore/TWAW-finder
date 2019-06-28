@@ -160,3 +160,29 @@ body {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.gunResult{
+  display: flex;
+  flex-direction: column;
+
+  margin: 12px;
+}
+.gunTitle{
+  margin: auto;
+  border-bottom: 3px solid black;
+  margin-bottom: 8px;
+}
+
+.gunDetails{
+  display: flex;
+  padding: 10px;
+}
+.gunStats{
+
+}
+.gunImage{
+  border-radius: 5px;
+  box-shadow: 5px 5px #CDCDCD;
+  width: 300px;
+  height: auto;
+}
