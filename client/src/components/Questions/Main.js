@@ -8,8 +8,8 @@ export default class Questions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentQ: null,
-      progress:'before',
+      currentQ: 6,
+      progress:'during',
       responses: {
         palmLength: null,
         palmWidth: null,
@@ -97,7 +97,7 @@ export default class Questions extends Component {
   renderQuestions = () => {
     let currentQuestion = questions[this.state.currentQ];
     return (
-      <div className="container">
+      <div className="questionContainer">
         <Question
           question={currentQuestion}
           answer={this.answerQuestion}
@@ -117,7 +117,7 @@ export default class Questions extends Component {
       <div className="container">
         <h1>Finished!</h1>
         <button
-          className="btn btn-start"
+          className="btn btn-secondary"
           onClick={() => this.handleSubmit()}
         >
           Submit Quiz
@@ -128,8 +128,8 @@ export default class Questions extends Component {
   renderResults = () => {
     let {results} = this.state
     if(results.length > 0){
-      return (<div>
-        <h1>Here are your results! we found {results.length} gun(s)
+      return (<div className="resultsContainer">
+        <h1 className="resultsHeading">Here are your results! We found {results.length} gun(s)
         </h1>{results.map(gun => (
         <div className="resultScreen">
           <Result gun={gun} />
@@ -137,7 +137,7 @@ export default class Questions extends Component {
         </div>
       )
     } else if(results.length === 0) {
-      return <div>No results availabke</div>
+      return <div>No results available</div>
     } else {
       return <div>Loading</div>
     }

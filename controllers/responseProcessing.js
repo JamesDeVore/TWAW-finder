@@ -115,6 +115,9 @@ const responseProcessing = async (req,res) => {
   })
   let eligibleGuns = gunData.filter(gun => !gun.disqualified);
   eligibleGuns;
+  if(eligibleGuns.length >= 5) {
+    eligibleGuns.length = 5;
+  }
   res.send(JSON.stringify(eligibleGuns))
 
 }

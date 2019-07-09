@@ -1,10 +1,9 @@
 import React from 'react'
-import { useState, useEffect, useRef } from "react";
 import SelectButtons from './answerTypes/Select'
 
 //given a question object, just render the question
 export default function Question(props) {
-  let {question:{text,answers,category,type,image},number} = props
+  let {question:{text,answers,category,type,image,subtext},number} = props
   console.log(type)
   setTimeout(() => {
     document.querySelector(".questionBox-before").classList.add("questionBox-active");
@@ -35,15 +34,18 @@ export default function Question(props) {
   }
   console.log(image)
   return (
-    <div className="row justify-content-center questionBox-before">
-      <div className="col-md-10 questionText">
-        <h2>Question #{number + 1}</h2>
-        <h1>{text}</h1>
+    <div className="row justify-content-center questionBox questionBox-before">
+      <div className="col-10 questionTitle">
+        <h1>Question #{number + 1}</h1>
+      </div>
+      <div className="col-6 questionText">
+        <h3 className="questionMainText">{text}</h3>
+        <p className="questionSubtext">{subtext}</p>
+      </div>
+      <div className="col-4">
+        <img className="questionImg" src={image} />
       </div>
       <div className="col-md-8 answersDiv">{allAnswers()}</div>
-      <div className="col-md-8">
-        <img src={image} />
-      </div>
     </div>
   );
 }

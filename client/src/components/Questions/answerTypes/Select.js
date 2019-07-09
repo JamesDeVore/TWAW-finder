@@ -45,7 +45,9 @@ export default class SelectButtons extends Component {
     return (
       <div className="radioDiv">
        {this.renderSelects()}<br/>
-       <button onClick={() => {
+       <button
+       className="btn responseBtn"
+       onClick={() => {
          document
            .querySelector(".questionBox-before")
            .classList.remove("questionBox-active");
