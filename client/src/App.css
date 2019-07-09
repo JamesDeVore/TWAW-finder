@@ -64,8 +64,11 @@ body {
   transform:scale(1.1);
   transition:transform .2s ease-in-out;
 }
-.questionBox {
-  margin-top:15px;
+.questionContainer{
+  
+}
+.questionText{
+
 }
 .questionImg {
     border-radius: 5px;
@@ -84,6 +87,8 @@ body {
 .questionTitle h1{
   border-bottom: 4px solid rgb(97, 97, 97);
 }
+
+
 
 .questionMainText {
   font-weight: 550;

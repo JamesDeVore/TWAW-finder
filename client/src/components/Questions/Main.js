@@ -8,8 +8,8 @@ export default class Questions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentQ: 6,
-      progress:'during',
+      currentQ: null,
+      progress:'before',
       responses: {
         palmLength: null,
         palmWidth: null,
