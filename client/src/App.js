@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import NavBar from './components/Welcome/NavBar'
 import Welcome from './components/Welcome/Welcome'
-import Questions from './components/Questions/Main'
+import Questions from './components/Main'
+
 import './App.css';
 
 class App extends Component {
