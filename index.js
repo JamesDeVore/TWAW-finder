@@ -2,9 +2,9 @@ const express = require("express");
 const http = require("http");
 const bodyParser = require("body-parser");
 const app = express();
-const router = require("./router");
 const cors = require("cors");
 const path = require("path")
+const { responseProcessing } = require("./controllers/responseProcessing");
 
 // DB 
 // mongoose.connect(keys.MONGODB_URI);
@@ -13,9 +13,11 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-router(app);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.post("/api/responseProcessing", responseProcessing);
+
 
 //production mode
 if (process.env.NODE_ENV === 'production') {
