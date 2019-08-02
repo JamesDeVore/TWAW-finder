@@ -12,6 +12,12 @@ import { faPinterest } from "@fortawesome/free-solid-svg-icons";
     appBar: {
       backgroundColor: "black",
       color: "white"
+    },
+    link:{
+      color:'white',
+      '&:hover':{
+        color:'white'
+      }
     }
   }));
 
@@ -43,16 +49,36 @@ export default function NavBar() {
             <Grid item>
               <Grid container spacing={1} alignItems="center">
                 <Grid item>
-                  <i class="fab fa-pinterest" />
+                  <a
+                    className={classes.link}
+                    href="https://www.pinterest.com/driftincowgirl/well-armed-woman/"
+                  >
+                    <i class="fab fa-pinterest" />
+                  </a>
                 </Grid>
                 <Grid item>
-                  <i class="fab fa-facebook" />
+                  <a
+                    className={classes.link}
+                    href="https://www.facebook.com/TheWellArmedWoman"
+                  >
+                    <i class="fab fa-facebook" />
+                  </a>
                 </Grid>
                 <Grid item>
-                  <i class="fab fa-twitter" />
+                  <a
+                    className={classes.link}
+                    href="https://twitter.com/WellArmedWoman"
+                  >
+                    <i class="fab fa-twitter" />
+                  </a>
                 </Grid>
                 <Grid item>
-                  <i class="fab fa-instagram" />
+                  <a
+                    className={classes.link}
+                    href="https://www.instagram.com/the_well_armed_woman/"
+                  >
+                    <i class="fab fa-instagram" />
+                  </a>
                 </Grid>
               </Grid>
             </Grid>
