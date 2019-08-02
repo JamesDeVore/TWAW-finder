@@ -113,10 +113,11 @@ const responseProcessing = async (req,res) => {
     }
     
   })
+  //add the bang, and dont unshift
   let eligibleGuns = gunData.filter(gun => !gun.disqualified);
   eligibleGuns;
-  if(eligibleGuns.length >= 5) {
-    eligibleGuns.length = 5;
+  if(eligibleGuns.length >= 6) {
+    eligibleGuns.length = 6;
   }
   res.send(JSON.stringify(eligibleGuns))
 

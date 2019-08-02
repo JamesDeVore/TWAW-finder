@@ -6,6 +6,7 @@ import ResponseSummary from "./Questions/ResponseSummary";
 import Intro from "./Questions/Intro";
 import { makeStyles } from "@material-ui/core/styles";
 import QuestionContainer from './Questions/QuestionContainer';
+import ResultsContainer from './Results/ResultsContainer'
 
 
 //material components
@@ -67,32 +68,13 @@ export default class Questions extends Component {
         "Content-Type": "application/json"
       }
     }).then(results => results.json());
+    console.log(results)
     this.setState({ results });
   };
   goBack = () => {
     this.setState({ currentQ: (this.state.currentQ -= 1) });
   };
-  renderResults = () => {
-    let { results } = this.state;
-    if (results.length > 0) {
-      return (
-        <div className="resultsContainer">
-          <h1 className="resultsHeading">
-            Here are your results! We found {results.length} gun(s)
-          </h1>
-          {results.map(gun => (
-            <div className="resultScreen">
-              <Result gun={gun} />
-            </div>
-          ))}
-        </div>
-      );
-    } else if (results.length === 0) {
-      return <div>No results available</div>;
-    } else {
-      return <div>Loading</div>;
-    }
-  };
+
   render() {
     switch (this.state.progress) {
       case "before":
@@ -109,7 +91,7 @@ export default class Questions extends Component {
             />
           );
         } else {
-          return this.renderResults();
+          return <ResultsContainer results={this.state.results} />
         }
     }
   }
