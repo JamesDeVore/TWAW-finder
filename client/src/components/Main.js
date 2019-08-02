@@ -5,9 +5,12 @@ import Result from "./Results/Results";
 import ResponseSummary from "./Questions/ResponseSummary";
 import Intro from "./Questions/Intro";
 import { makeStyles } from "@material-ui/core/styles";
-import QuestionContainer from './Questions/QuestionContainer';
-import ResultsContainer from './Results/ResultsContainer'
+import QuestionContainer from "./Questions/QuestionContainer";
+import ResultsContainer from "./Results/ResultsContainer";
+//utils
+import responseProcessing from "../utils/ResponseProcessing";
 
+import Papa from "papaparse";
 
 //material components
 import Container from "@material-ui/core/Container";
@@ -60,16 +63,31 @@ export default class Questions extends Component {
     }
   };
   handleSubmit = async () => {
-    let results = await fetch("api/responseProcessing", {
-      method: "POST",
-      body: JSON.stringify(this.state.responses),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
+    var csvFilePath = require("../assets/GunData.csv");
+    Papa.parse(csvFilePath, {
+      download: true,
+      complete:async data => {
+        //need to create an array of all objects. nested loops ahoy
+        let allGunData = [];
+        let headersArray = data.data[0];
+        for (let num in data.data) {
+          if (+num > 1) {
+            let thisGun = data.data[num];
+            let gunObj = {};
+            thisGun.forEach((property, index) => {
+              gunObj[headersArray[index]] = property;
+            });
+            allGunData.push(gunObj);
+          }
+        }
+        let results = await responseProcessing(
+          this.state.responses,
+          allGunData
+        ).then(res => res);
+        this.setState({results})
+        
       }
-    }).then(results => results.json());
-    console.log(results)
-    this.setState({ results });
+    });
   };
   goBack = () => {
     this.setState({ currentQ: (this.state.currentQ -= 1) });
@@ -80,7 +98,13 @@ export default class Questions extends Component {
       case "before":
         return <Intro beginQuestions={this.beginQuestions} />;
       case "during":
-        return <QuestionContainer currentQ={this.state.currentQ} answerQuestion={this.answerQuestion} goBack={this.goBack} />
+        return (
+          <QuestionContainer
+            currentQ={this.state.currentQ}
+            answerQuestion={this.answerQuestion}
+            goBack={this.goBack}
+          />
+        );
       case "end":
         if (!this.state.results) {
           return (
@@ -91,7 +115,7 @@ export default class Questions extends Component {
             />
           );
         } else {
-          return <ResultsContainer results={this.state.results} />
+          return <ResultsContainer results={this.state.results} />;
         }
     }
   }
