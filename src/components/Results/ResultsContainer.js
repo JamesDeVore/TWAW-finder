@@ -28,7 +28,7 @@ export default function ResultsContainer(props) {
         </Typography>
       </Grid>
         {props.results.map(gun => (
-          <Grid item xs={5}>
+          <Grid item sm={5}>
             <Result gun={gun} />
           </Grid>
         ))}

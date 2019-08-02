@@ -28,13 +28,15 @@ const useStyles = makeStyles(theme => ({
   paper: {
     justifyContent: "center",
     alignItems: "center",
-    padding: 22
+    padding: 22,
+    marginBottom:36
   },
   startBtn: {
     textDecoration: "none",
     padding:8,
     backgroundColor: "#552564",
     color: "white",
+    marginBottom:36,
     "&:hover": {
       backgroundColor: "#a348bf"
     }
@@ -52,7 +54,7 @@ export default function Welcome(props) {
         className={classes.gridRoot}
         alignItems="center"
       >
-        <Grid xs={12} item className={classes.overlayContainer}>
+        <Grid sm={12} item className={classes.overlayContainer}>
           <img
             className={classes.image}
             src="https://thewellarmedwoman.com/wp-content/themes/woman/images/top.jpg"
@@ -71,12 +73,12 @@ export default function Welcome(props) {
               alignItems="center"
               alignContent="center"
             >
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 <Typography gutterBottom variant="h2">
                   My Gun Finder
                 </Typography>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item sm={8}>
                 <Typography variant="subtitle1" paragraph>
                   This tool is designed to help you find the gun that is the
                   right fit for you! It's not perfect, and we encourage you
@@ -110,8 +112,8 @@ export default function Welcome(props) {
                   </ListItem>
                 </List>
               </Grid>
-              <Grid item xs={8}>
-                <Link to="/questions">
+              <Grid item sm={8}>
+                <Link to="/questions" style={{textDecoration:'none'}}>
                   <Button className={classes.startBtn}>
                     Let's get started!
                   </Button>

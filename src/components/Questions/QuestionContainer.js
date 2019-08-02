@@ -37,7 +37,7 @@ export default function QuestionContainer(props) {
     <Container className={classes.root}>
       <Paper>
         <Grid container direction="column" justify='space-between' className={classes.paper}>
-          <Grid item xs={12} className={classes.questionArea}>
+          <Grid item sm={12} className={classes.questionArea}>
             <Question
               question={currentQuestion}
               answer={props.answerQuestion}
