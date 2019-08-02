@@ -11,7 +11,8 @@ import Grid from "@material-ui/core/Grid"
 export default function QuestionContainer(props) {
   const useStyles = makeStyles(theme => ({
     paper: {
-      padding: 22
+      padding: 22,
+      minHeight:'80vh'
     },
     root: {
       marginTop: 24
@@ -24,6 +25,9 @@ export default function QuestionContainer(props) {
       "&:hover": {
         backgroundColor: "gray"
       }
+    },
+    questionArea:{
+      minHeight:"75vh"
     }
   }));
 
@@ -31,9 +35,9 @@ export default function QuestionContainer(props) {
   const classes = useStyles();
   return (
     <Container className={classes.root}>
-      <Paper className={classes.paper}>
-        <Grid container direction='column' spacing={12}>
-          <Grid item xs={12}>
+      <Paper>
+        <Grid container direction="column" justify='space-between' className={classes.paper}>
+          <Grid item xs={12} className={classes.questionArea}>
             <Question
               question={currentQuestion}
               answer={props.answerQuestion}

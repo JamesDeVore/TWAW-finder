@@ -17,9 +17,16 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: "#a348bf"
     }
   },
+  image:{
+    maxHeight:250,
+    maxWidth:250
+  },
   answers:{
     margin:16
-  }
+  },
+  root:{
+    height:'75vh'
+    }
 }));
 
 //given a question object, just render the question
@@ -34,8 +41,8 @@ export default function Question(props) {
     if (type === "select") {
       return <SelectButtons question={props.question} answer={props.answer} />;
     } else {
-      return answers.map(answer => (
-        <Grid item xs={3}>
+      return answers.map((answer,index) => (
+        <Grid item xs={Math.floor(12/answers.length)}>
           <Button
             className={classes.answerButton}
             onClick={() => {
@@ -49,20 +56,20 @@ export default function Question(props) {
     }
   };
   return (
-    <Grid container direction="row" alignItems="center">
+    <Grid className={classes.root} container direction="row" justify='space-around' alignItems="center">
       <Grid item xs={12}>
         <Typography gutterBottom variant="h2">
           Question #{number + 1}
         </Typography>
       </Grid>
-      <Grid item xs={6}>
-        <Typography gutterBottom variant="h5">{text}</Typography>
+      <Grid item xs={8}>
+        <Typography gutterBottom variant="h4">{text}</Typography>
         <Typography variant="subtitle1">{subtext}</Typography>
       </Grid>
       <Grid item xs={4}>
-        <img src={image} />
+        <img src={image} className={classes.image} />
       </Grid>
-      <Grid className={classes.answers} container justify="flex-start" item xs={10}>
+      <Grid item className={classes.answers} wrap='no-wrap' container justify="flex-start" item xs={10}>
         {allAnswers()}
       </Grid>
     </Grid>
