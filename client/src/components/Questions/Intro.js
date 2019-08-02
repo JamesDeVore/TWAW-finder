@@ -3,19 +3,34 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid"
+import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    marginTop: 20
+  },
+  begin: {
+    textDecoration: "none",
+    padding: 8,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  },
+  paper:{
+    padding:22
+  }
+}));
 
 export default function Intro(props) {
+  const classes = useStyles();
   return (
-    <Container>
-      <Paper>
-        <Grid
-          container
-          justify="center"
-          direction="column"
-          alignItems="center"
-        >
+    <Container className={classes.root}>
+      <Paper className={classes.paper}>
+        <Grid container justify="center" direction="column" alignItems="center">
           <Grid item xs={12}>
             <Typography gutterBottom variant="h2">
               The Quiz:
@@ -24,8 +39,8 @@ export default function Intro(props) {
           <Grid item sm={6}>
             <Typography paragraph variant="subtitle1">
               This quiz will take about 10-15 minutes, and will require you to
-              know some hand measurements. Before we begin, make sure you have
-              a ruler or some way to measure your hand
+              know some hand measurements. Before we begin, make sure you have a
+              ruler or some way to measure your hand
             </Typography>
             <Divider />
             <Typography paragraph variant="subtitle1">
@@ -34,11 +49,7 @@ export default function Intro(props) {
             </Typography>
           </Grid>
           <Grid item xs={8}>
-            <Button
-              onClick={() => props.beginQuestions()}
-            >
-              Begin
-            </Button>
+            <Button className={classes.begin} onClick={() => props.beginQuestions()}>Begin</Button>
           </Grid>
         </Grid>
       </Paper>

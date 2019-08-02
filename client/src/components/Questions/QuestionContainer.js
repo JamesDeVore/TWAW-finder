@@ -15,7 +15,7 @@ export default function QuestionContainer(props) {
       minHeight:'80vh'
     },
     root: {
-      marginTop: 24
+      marginTop: 20
     },
     backButton: {
       textDecoration: "none",
