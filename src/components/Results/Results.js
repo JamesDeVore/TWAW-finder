@@ -47,7 +47,7 @@ export default function Results(props) {
           <ListItem>Caliber: {gun.caliber}</ListItem>
           <ListItem>MSRP: ${gun.Price}</ListItem>
         </List>
-        <Button className={classes.button} href={gun.Link}>View in Store</Button>
+        <Button className={classes.button} onClick={() => window.open(gun.Link,"_blank")}>View in Store</Button>
       </CardContent>
     </Card>
   );

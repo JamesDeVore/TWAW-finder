@@ -18,7 +18,7 @@ const answers = {
   purpose: [
     { text: "Home Defense", value: "Home Defense" },
     { text: "Concealed Carry", value: "Concealed Carry" },
-    { text: "Unsure", value: null }
+    { text: "Both", value: null }
   ],
   handed: [
     { text: "Right", value: "Right" },
@@ -35,19 +35,19 @@ const answers = {
     { text: "Unsure", value: "Unsure" }
   ],
   palmRanges: [
-    { text: '0" - 2.5"', value: 2 },
+    { text: 'Up to 2.5"', value: 2 },
     { text: '2.6" - 3"', value: 2 },
     { text: '3.1" - 3.5"', value: 3 },
     { text: '3.6" +', value: 4 }
   ],
   triggerFingerRanges: [
-    { text: '0" - 2.5"', value: 2 },
+    { text: 'Up to 2.5"', value: 2 },
     { text: '2.6" - 3"', value: 2 },
     { text: '3.1" - 3.5"', value: 3 },
     { text: '3.6" - 4,4" +', value: 4 }
   ],
   thumbRanges: [
-    { text: '0" - 1.9"', value: "2" },
+    { text: 'Up to 1.9"', value: "2" },
     { text: '2.0" - 2.25"', value: "2" },
     { text: '2.26" - 2.49"', value: "3" },
     { text: '2.5" +', value: "4" }
