@@ -5,7 +5,7 @@ const answers = {
     { text: "Unsure", value: null }
   ],
   scale: [
-    { text: "1", value: 1 },
+    { text: "1", value: 2 },
     { text: "2", value: 2 },
     { text: "3", value: 3 },
     { text: "4", value: 4 }
@@ -35,19 +35,19 @@ const answers = {
     { text: "Unsure", value: "Unsure" }
   ],
   palmRanges: [
-    { text: '0" - 2.5"', value: 1 },
+    { text: '0" - 2.5"', value: 2 },
     { text: '2.6" - 3"', value: 2 },
     { text: '3.1" - 3.5"', value: 3 },
     { text: '3.6" +', value: 4 }
   ],
   triggerFingerRanges: [
-    { text: '0" - 2.5"', value: 1 },
+    { text: '0" - 2.5"', value: 2 },
     { text: '2.6" - 3"', value: 2 },
     { text: '3.1" - 3.5"', value: 3 },
     { text: '3.6" - 4,4" +', value: 4 }
   ],
   thumbRanges: [
-    { text: '0" - 1.9"', value: "1" },
+    { text: '0" - 1.9"', value: "2" },
     { text: '2.0" - 2.25"', value: "2" },
     { text: '2.26" - 2.49"', value: "3" },
     { text: '2.5" +', value: "4" }
@@ -57,7 +57,7 @@ const answers = {
     { text: "$301-$500", value: 2 },
     { text: "$501-$700", value: 3 },
     { text: "$701-$1000", value: 4 },
-    { text: "$1000+", value: 5 }
+    { text: "Any $", value: 5 }
   ]
 };
 
