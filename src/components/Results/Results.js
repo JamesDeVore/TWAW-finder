@@ -31,6 +31,18 @@ export default function Results(props) {
   const classes = useStyles()
   console.log(props)
   let{gun} = props
+  let storeButton = null
+  if(gun.Link){
+    storeButton = (
+      <Button
+        className={classes.button}
+        onClick={() => window.open(gun.Link, "_blank")}
+      >
+        See Review
+      </Button>
+    );
+
+  }
   return (
     <Card>
       <CardContent>
@@ -47,7 +59,7 @@ export default function Results(props) {
           <ListItem>Caliber: {gun.caliber}</ListItem>
           <ListItem>MSRP: ${gun.Price}</ListItem>
         </List>
-        <Button className={classes.button} onClick={() => window.open(gun.Link,"_blank")}>View in Store</Button>
+        {storeButton}
       </CardContent>
     </Card>
   );

@@ -22,8 +22,8 @@ export default class Questions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentQ: null,
-      progress: "before",
+      currentQ: 0,
+      progress: "during",
       responses: {
         palmLength: null,
         palmWidth: null,
@@ -50,13 +50,21 @@ export default class Questions extends Component {
   };
   answerQuestion = (answer, category) => {
     //first, set the response in the state response object
+  
+    // a yes on question 4 means they need to skip #5
+    let skipValue = 1
+    
+    if(this.state.currentQ === 3 && answer){
+      skipValue = 2
+    }
+
     let oldState = { ...this.state.responses };
     oldState[category] = answer;
     this.setState({ responses: oldState });
 
     let { currentQ } = this.state;
     if (currentQ < Object.keys(questions).length - 1) {
-      this.setState({ currentQ: (currentQ += 1) });
+      this.setState({ currentQ: (currentQ += skipValue) });
     } else {
       //handle end of quiz here
       this.setState({ progress: "end" });

@@ -42,7 +42,7 @@ const questions = {
     id: 3,
     text: "Do you require a gun with a laser?",
     subtext:
-      "A laser assists with aiming by allowing you to see where the gun in aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser.",
+      "A laser assists with aiming by allowing you to see where the gun in aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser. Selecting yes will take you directly to question 6",
     answers: yesNoUnsure,
     category: "laser",
     image: laser
