@@ -110,9 +110,9 @@ const responseProcessing = async (idealGun, gunData) => {
   //add the bang, and dont unshift
   
   let eligibleGuns = gunData.filter(gun => !gun.disqualified);
-  if(eligibleGuns.length >= 6) {
-    eligibleGuns.length = 6;
-  }
+  // if(eligibleGuns.length >= 6) {
+  //   eligibleGuns.length = 6;
+  // }
   // console.log(eligibleGuns)
   return eligibleGuns
   

@@ -16,7 +16,7 @@ const answers = {
     { text: "Unsure", value: null }
   ],
   purpose: [
-    { text: "Home Defence", value: "Home Defence" },
+    { text: "Home Defense", value: "Home Defense" },
     { text: "Concealed Carry", value: "Concealed Carry" },
     { text: "Unsure", value: null }
   ],
@@ -26,9 +26,9 @@ const answers = {
     { text: "Unsure / Ambidextrous", value: null }
   ],
   calibers: [
-    { text: "22", value: "22" },
+    { text: ".22 LR", value: "22" },
     { text: ".380", value: "380" },
-    { text: "0.38", value: "0.38" },
+    { text: ".38 Special", value: "0.38" },
     { text: "9mm", value: "9" },
     { text: ".40", value: "40" },
     { text: ".45", value: "45" },

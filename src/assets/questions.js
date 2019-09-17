@@ -70,7 +70,7 @@ const questions = {
     text:
       "At this time do you require a specific caliber or are you open to different calibers?",
     subtext:
-      "Caliber can affect the recoil, overall weight, and other factors in choosing a gun. Selecting unsure will not eliminate any gun based on caliber",
+      "Caliber can affect the recoil, overall weight, and other factors in choosing a gun. Selecting unsure will not eliminate any gun based on caliber. You can select multiple calibers.",
     answers: calibers,
     category: "caliber",
     type: "select"
