@@ -11,6 +11,7 @@ const responseProcessing = async (idealGun, gunData) => {
     }
     
     gun.disqualified = false;
+    gun.calScore = 0;
 
     let { budget,
           caliber,
@@ -78,8 +79,8 @@ const responseProcessing = async (idealGun, gunData) => {
       if (caliber.length > 0 && caliber.length !== 5) {
         //only care if there are calibers selected ant not all are selected
         let foundCal = caliber.find(desiredCal => desiredCal === gun.caliber);
-        if (!foundCal) {
-          gun.disqualified = true;
+        if (foundCal) {
+          gun.calScore = 1;
           return
         }
       }
@@ -107,9 +108,10 @@ const responseProcessing = async (idealGun, gunData) => {
     }
     
   })
-  //add the bang, and dont unshift
   
   let eligibleGuns = gunData.filter(gun => !gun.disqualified);
+  eligibleGuns.sort((a, b) => (b.calScore > a.calScore ? 1 : -1));
+
   // if(eligibleGuns.length >= 6) {
   //   eligibleGuns.length = 6;
   // }

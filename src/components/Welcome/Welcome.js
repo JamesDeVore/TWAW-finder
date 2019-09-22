@@ -8,7 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Button from "@material-ui/core/Button";
-import { useTheme } from "@material-ui/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,88 +43,139 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const useMobile = makeStyles(theme => ({
+  image: {
+    width: "100%",
+    height: "auto"
+  },
+  overlayContainer: {
+    position: "relative"
+  },
+  overlay: {
+    position: "absolute",
+    top: "40%",
+    left: "33%",
+    color: "white"
+  },
+  intro:{
+    fontSize:"1.2em"
+  },
+  paper: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 22,
+    marginBottom: 36
+  },
+  startBtn: {
+    textDecoration: "none",
+    padding: 14,
+    backgroundColor: "#552564",
+    color: "white",
+    marginBottom: 36,
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  }
+}));
+
 export default function Welcome(props) {
-  const classes = useStyles();
-  return (
-    <Container>
-      <Grid
-        container
-        justify="center"
-        direction="column"
-        className={classes.gridRoot}
-        alignItems="center"
-      >
-        <Grid sm={12} item className={classes.overlayContainer}>
-          <img
-            className={classes.image}
-            src="https://thewellarmedwoman.com/wp-content/themes/woman/images/top.jpg"
-            alt=""
-          />
-          <Typography justify="center" variant="h4" className={classes.overlay}>
-            EDUCATE&nbsp; EQUIP&nbsp; EMPOWER
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Paper className={classes.paper}>
-            <Grid
-              container
-              justify="center"
-              direction="column"
-              alignItems="center"
-              alignContent="center"
-            >
-              <Grid item sm={12}>
-                <Typography gutterBottom variant="h2">
-                  My Gun Finder
-                </Typography>
-              </Grid>
-              <Grid item sm={8}>
-                <Typography variant="subtitle1" paragraph>
-                  This tool is designed to help you find the gun that is the
-                  right fit for you! It's not perfect, and we encourage you
-                  conduct your own research on the guns we suggest. However it
-                  will give you a starting point. If you have any questions,
-                  please don't hesitate to reach out, we are happy to help.
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant="h4">
-                  What this tool is designed to do:
-                </Typography>
-                <hr />
-                <List>
-                  <ListItem>
-                    Help you determine the right gun for your needs
-                  </ListItem>
-                  <ListItem>
-                    Help you think about what properties to look for in your
-                    gun.
-                  </ListItem>
-                </List>
-                <Typography variant="h4">
-                  What this tool is NOT designed to do:
-                </Typography>
-                <hr />
-                <List>
-                  <ListItem>Be the final say in the guns you can buy</ListItem>
-                  <ListItem>
-                    Limit you to the guns we show and ONLY the ones we show
-                  </ListItem>
-                </List>
-              </Grid>
-              <Grid item sm={8}>
-                <Link to="/questions" style={{textDecoration:'none'}}>
-                  <Button className={classes.startBtn}>
-                    Let's get started!
-                  </Button>
-                </Link>
-              </Grid>
+  const matches = useMediaQuery("(max-width:450px)");
+  const desktop = useStyles();
+  const mobile = useMobile();
+  let classes = desktop;
+  if (matches) {
+    classes = mobile;
+  }   return (
+        <Container>
+          <Grid
+            container
+            justify="center"
+            direction="column"
+            className={classes.gridRoot}
+            alignItems="center"
+          >
+            <Grid sm={12} item className={classes.overlayContainer}>
+              <img
+                className={classes.image}
+                src="https://thewellarmedwoman.com/wp-content/themes/woman/images/top.jpg"
+                alt=""
+              />
+              <Typography
+                justify="center"
+                variant="h4"
+                className={classes.overlay}
+              >
+                EDUCATE&nbsp; EQUIP&nbsp; EMPOWER
+              </Typography>
             </Grid>
-          </Paper>
-        </Grid>
-      </Grid>
-    </Container>
-  );
+            <Grid item>
+              <Paper className={classes.paper}>
+                <Grid
+                  container
+                  justify="center"
+                  direction="column"
+                  alignItems="center"
+                  alignContent="center"
+                >
+                  <Grid item sm={12}>
+                    <Typography gutterBottom variant="h3">
+                      My Gun Finder
+                    </Typography>
+                  </Grid>
+                  <Grid item sm={8}>
+                    <Typography
+                      variant="subtitle1"
+                      paragraph
+                      className={classes.intro}
+                    >
+                      This tool is designed to help you find the gun that is the
+                      right fit for you! It's not perfect, and we encourage you
+                      conduct your own research on the guns we suggest. However
+                      it will give you a starting point. If you have any
+                      questions, please don't hesitate to reach out, we are
+                      happy to help.
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h4">
+                      What this tool is designed to do:
+                    </Typography>
+                    <hr />
+                    <List className={classes.intro}>
+                      <ListItem>
+                        Help you determine the right gun for your needs
+                      </ListItem>
+                      <ListItem>
+                        Help you think about what properties to look for in your
+                        gun.
+                      </ListItem>
+                    </List>
+                    <Typography variant="h4">
+                      What this tool is NOT designed to do:
+                    </Typography>
+                    <hr />
+                    <List className={classes.intro}>
+                      <ListItem>
+                        Be the final say in the guns you can buy
+                      </ListItem>
+                      <ListItem>
+                        Limit you to the guns we show and ONLY the ones we show
+                      </ListItem>
+                    </List>
+                  </Grid>
+                  <Grid item sm={8}>
+                    <Link to="/questions" style={{ textDecoration: "none" }}>
+                      <Button className={classes.startBtn}>
+                        Let's get started!
+                      </Button>
+                    </Link>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      );
 }
 
 // class Welcome extends Component {

@@ -6,6 +6,8 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,9 +26,35 @@ const useStyles = makeStyles(theme => ({
     padding:22
   }
 }));
+const useMobile = makeStyles(theme => ({
+  root: {
+    marginTop: 0
+  },
+  begin: {
+    textDecoration: "none",
+    padding: 14,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  },
+  paper: {
+    padding: 22,
+    position:'fixed',
+    top:"10%",
+    marginRight:15
+  }
+}));
 
 export default function Intro(props) {
-  const classes = useStyles();
+  const matches = useMediaQuery("(max-width:450px)");
+  const desktop = useStyles();
+  const mobile = useMobile();
+  let classes = desktop;
+  if (matches){
+   classes = mobile
+  } 
   return (
     <Container className={classes.root}>
       <Paper className={classes.paper}>

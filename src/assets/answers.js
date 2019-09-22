@@ -30,7 +30,7 @@ const answers = {
     { text: ".380", value: "380" },
     { text: ".38 Special", value: "0.38" },
     { text: "9mm", value: "9" },
-    { text: ".40", value: "40" },
+    // { text: ".40", value: "40" }, // no more 40s
     { text: ".45", value: "45" },
     { text: "Unsure", value: "Unsure" }
   ],
@@ -57,7 +57,7 @@ const answers = {
     { text: "$301-$500", value: 2 },
     { text: "$501-$700", value: 3 },
     { text: "$701-$1000", value: 4 },
-    { text: "Any $", value: 5 }
+    { text: "Any Amount", value: 5 }
   ]
 };
 

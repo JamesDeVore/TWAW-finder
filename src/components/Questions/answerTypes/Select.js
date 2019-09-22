@@ -4,13 +4,15 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
 
-
 export default class SelectButtons extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedCals: []
     };
+  }
+  componentDidMount(){
+    this.setState({selectedCals:["Unsure"]})
   }
   handleClick = value => {
     let { selectedCals } = this.state;
@@ -32,14 +34,15 @@ export default class SelectButtons extends Component {
     }
   };
   renderSelects = () => {
+    
     let {
       question: { answers }
     } = this.props;
     return answers.map(answer => {
       return (
-        <Grid item xs={3}>
+        <Grid item xs={6} className="caliberButton">
         <label className="caliberLabel">
-          {answer.text}
+          <p className="caliberText">{answer.text}</p>
           <input
             type="checkbox"
             className="caliberCheck"
@@ -55,7 +58,7 @@ export default class SelectButtons extends Component {
   };
   render() {
     return (
-      <Grid container className="radioDiv">
+      <Grid container className="radioDiv" justifyContent='space-around'>
         {this.renderSelects()}
         <Grid item xs={3} />
         <Grid item xs={3} />

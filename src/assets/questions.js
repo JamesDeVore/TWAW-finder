@@ -2,6 +2,7 @@ import answers from './answers'
 const laser = require('./questionImages/laser.png');
 const palmLength = require('./questionImages/palmLength.png')
 const palmWidth = require('./questionImages/palmWidth.png')
+const thumbLength = require('./questionImages/thumbLength.png')
 const picatinnyRail = require('./questionImages/picatinnyRail.jpg')
 const thumbSafety = require('./questionImages/thumbSafety.png')
 const triggerFinger = require('./questionImages/triggerFinger.png') 
@@ -109,17 +110,17 @@ const questions = {
     category: "palmLength",
     image: palmLength
   },
+  // 11: {
+  //   id: 11,
+  //   text: "With your fingers together, what is the width of your palm",
+  //   subtext:
+  //     "This will help to ensure that the height of the grip will be within your palm so the sun fits securely in your hand.",
+  //   answers: palmRanges,
+  //   category: "palmWidth",
+  //   image: palmWidth
+  // },
   11: {
     id: 11,
-    text: "With your fingers together, what is the width of your palm",
-    subtext:
-      "This will help to ensure that the height of the grip will be within your palm so the sun fits securely in your hand.",
-    answers: palmRanges,
-    category: "palmWidth",
-    image: palmWidth
-  },
-  12: {
-    id: 12,
     text: "What is your trigger (index) finger Length?",
     subtext:
       "This is the length of trigger finger from thumb web to the center of your outermost fingertip pad. This ensures your finger can safely and reliably reach the trigger of the gun.",
@@ -127,15 +128,16 @@ const questions = {
     category: "triggerFingerLength",
     image: triggerFinger
   },
+  12: {
+    id: 12,
+    text: "What is the length of your dominant thumb?",
+    subtext: "",
+    answers: thumbRanges,
+    category: "thumbLength",
+    image:thumbLength
+  },
   13: {
     id: 13,
-    text: "What is the length of your thumb?",
-    subtext: "This measurement is from the center of your thumb web to the tip of your thumb. This measurement ensures your thumb can securely grip the pistol grip safely and securely.",
-    answers: thumbRanges,
-    category: "thumbLength"
-  },
-  14: {
-    id: 14,
     text:
       "What will your budget allow for you to spend on the right gun for self-defense?",
     answers: budget,

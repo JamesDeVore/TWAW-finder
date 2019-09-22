@@ -8,9 +8,26 @@ import CardMedia from "@material-ui/core/CardMedia"
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider"
+import Divider from "@material-ui/core/Divider";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const useStyles = makeStyles(theme => ({
+  image: {
+    height: 200,
+    margin: "auto"
+  },
+  button: {
+    textDecoration: "none",
+    padding: 8,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  }
+}));
+const useMobile = makeStyles(theme => ({
   image: {
     height: 200,
     margin: "auto"
@@ -28,8 +45,13 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function Results(props) {
-  const classes = useStyles()
-  console.log(props)
+  const matches = useMediaQuery("(max-width:450px)");
+  const desktop = useStyles();
+  const mobile = useMobile();
+      let classes = desktop;
+    if (matches) {
+      classes = mobile;
+    }
   let{gun} = props
   let storeButton = null
   if(gun.Link){
@@ -41,8 +63,25 @@ export default function Results(props) {
         See Review
       </Button>
     );
-
   }
+  switch(gun.caliber.toString()){
+    case "9":
+      gun.caliber = "9mm";
+      break;
+    case "22":
+      gun.caliber = "22 LR";
+      break;
+    case "0.22":
+      gun.caliber = "22 LR";
+      break;
+    case "0.38":
+      gun.caliber = ".38 Special";
+      break;
+    case "380":
+      gun.caliber = ".380";
+      break;
+  }
+  //TODO format calibers 9 -> 9mm .22LR, .38 Special, .380, .45,.40,
   return (
     <Card>
       <CardContent>

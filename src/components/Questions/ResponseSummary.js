@@ -10,6 +10,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Button from "@material-ui/core/Button"
 import Divider from "@material-ui/core/Divider"
 import {makeStyles} from '@material-ui/core/styles'
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const useStyles = makeStyles(theme => ({
   submitButton: {
@@ -26,10 +28,31 @@ const useStyles = makeStyles(theme => ({
     marginTop:16
   }
 }));
+const useMobile = makeStyles(theme => ({
+  submitButton: {
+    textDecoration: "none",
+    padding: 8,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  },
+  paper: {
+    padding: 20,
+    position:'relative',
+    top:60
+  }
+}));
 
 export default function ResponseSummary(props) {
-  const classes = useStyles();
-  return (
+    const matches = useMediaQuery("(max-width:450px)");
+    const desktop = useStyles();
+    const mobile = useMobile();
+    let classes = desktop;
+    if (matches) {
+      classes = mobile;
+    }  return (
     <Container>
       <Paper className={classes.paper}>
         <Grid container direction="column">

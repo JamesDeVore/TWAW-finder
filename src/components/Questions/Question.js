@@ -6,6 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const useStyles = makeStyles(theme => ({
   answerButton: {
@@ -18,8 +20,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   image:{
-    maxHeight:250,
-    maxWidth:250
+    maxHeight:350,
+    maxWidth:350,
+
   },
   answers:{
     margin:16
@@ -28,21 +31,54 @@ const useStyles = makeStyles(theme => ({
     height:'75vh'
     }
 }));
+const useMobile = makeStyles(theme => ({
+  answerButton: {
+    textDecoration: "none",
+    padding: "10px",
+    width: "100%",
+    fontSize:'1.1em',
+    backgroundColor: "#552564",
+    color: "white",
+    margin: "8px 0",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
+  },
+  image: {
+    maxHeight: 250,
+    maxWidth: 250,
+    position: "relative",
+    left: -40
+  },
+  answers: {
+    margin: 16
+  },
+  root: {
+    height: "0"
+  }
+}));
 
 //given a question object, just render the question
 export default function Question(props) {
+    const matches = useMediaQuery("(max-width:450px)");
+    const desktop = useStyles();
+    const mobile = useMobile();
+    let classes = desktop;
+    if (matches) {
+      classes = mobile;
+    }
+
   let {
     question: { text, answers, category, type, image, subtext },
     number
   } = props;
-  const classes = useStyles();
 
   const allAnswers = () => {
     if (type === "select") {
       return <SelectButtons question={props.question} answer={props.answer} />;
     } else {
       return answers.map((answer,index) => (
-        <Grid item xs={Math.floor(12/answers.length)}>
+        <Grid item xs={matches? 12:Math.floor(12/answers.length)}>
           <Button
             className={classes.answerButton}
             onClick={() => {
@@ -58,15 +94,15 @@ export default function Question(props) {
   return (
     <Grid className={classes.root} container direction="row" justify='space-around' alignItems="center">
       <Grid item xs={12}>
-        <Typography gutterBottom variant="h2">
+        <Typography gutterBottom variant="h3">
           Question #{number + 1}
         </Typography>
       </Grid>
-      <Grid item xs={8}>
-        <Typography gutterBottom variant="h4">{text}</Typography>
+      <Grid item xs={matches? 12:8}>
+        <Typography gutterBottom variant={matches? "h5":"h4"}>{text}</Typography>
         <Typography variant="subtitle1">{subtext}</Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={matches? 10:4} container={matches} justify='center'>
         <img src={image} className={classes.image} />
       </Grid>
       <Grid item className={classes.answers} wrap='no-wrap' container justify="flex-start" item xs={10}>

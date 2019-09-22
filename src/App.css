@@ -2,6 +2,8 @@ body {
   font-family:'Lato';
   background-color:rgb(228, 228, 228);
 }
+
+
 .welcome-banner {
   margin-bottom:1em;
 }
@@ -63,12 +65,7 @@ body {
   background-color:#a348bf !important;
     
 }
-.questionContainer{
-  
-}
-.questionText{
 
-}
 .questionImg {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
@@ -180,6 +177,14 @@ body {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+@media only screen and (max-width:450px) {
+.caliberText {
+  font-weight: 800;
+  font-size:0.8em;
+  width:80px
+}
+
 }
 
 .gunResult{

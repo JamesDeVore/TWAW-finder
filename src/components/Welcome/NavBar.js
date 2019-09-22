@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import React, { Component } from "react";
 import { makeStyles } from "@material-ui/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPinterest } from "@fortawesome/free-solid-svg-icons";
@@ -20,10 +21,28 @@ import { faPinterest } from "@fortawesome/free-solid-svg-icons";
       }
     }
   }));
+  const useMobile = makeStyles(theme => ({
+    appBar: {
+      backgroundColor: "black",
+      color: "white",
+      position:'fixed'
+    },
+    link: {
+      color: "white",
+      "&:hover": {
+        color: "white"
+      }
+    }
+  }));
 
 export default function NavBar() {
-
-  const classes = useStyles();
+  const matches = useMediaQuery("(max-width:450px)");
+  const desktop = useStyles();
+  const mobile = useMobile();
+  let classes = desktop;
+  if (matches){
+   classes = mobile
+  } 
   return (
     <div>
       <AppBar position="static" color="default" className={classes.appBar}>
