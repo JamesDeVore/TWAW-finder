@@ -60,9 +60,9 @@ export default function NavBar() {
                 />
               </a>
             </Grid>
-            <Grid item>
-              <Typography variant="h6" justify="center">
-                My Gun Finder
+            <Grid item onClick={() => window.location.reload()}>
+              <Typography variant="h7" justify="center">
+                TWAW Gun Finder
               </Typography>
             </Grid>
             <Grid item>

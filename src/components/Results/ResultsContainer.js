@@ -80,21 +80,23 @@ export default function ResultsContainer(props) {
           Your answers don't fit any gun we have in our database
         </Typography>
         <Divider />
-        <Button
-          className={classes.button}
-          onClick={() => window.location.reload()}
-        >
-          Start Over
-        </Button>
+
       </div>
     );
   } else {
     paperContent =  <div>Loading</div>;
   }
   return (
-  <Container>
-    <Paper className={classes.paper}>
-      {paperContent}
-    </Paper>
-  </Container>)
+    <Container>
+      <Paper className={classes.paper}>
+        {paperContent}
+        <Button
+          className={classes.button}
+          onClick={() => window.location.reload()}
+        >
+          Start Over
+        </Button>
+      </Paper>
+    </Container>
+  );
 }
