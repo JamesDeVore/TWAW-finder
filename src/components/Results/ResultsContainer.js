@@ -55,13 +55,21 @@ export default function ResultsContainer(props) {
   let paperContent = null
   if (props.results.length > 0) {
     paperContent = (
-      <Grid container justify="center" alignItems='center' spacing={6}>
-        <Grid item xs={12}>
+      <Grid container justify="center" alignItems="center" spacing={6}>
+        <Grid item xs={matches? 10:8}>
           <Typography variant={matches ? "h3" : "h2"}>Results:</Typography>
           <Divider />
           <Typography variant={matches ? "h4" : "h3"}>
             We found {props.results.length} gun
             {props.results.length > 1 ? "s" : ""} for you
+          </Typography>
+          <br />
+          <Typography subtitle variant="p">
+            These results are recommendations only and based on your answers.
+            The Well Armed Woman Gun Finder data base doesn’t include all of the
+            firearms available and only you can determine the right gun for you.
+            We encourage you to try these models at a local shooting range and
+            to conduct your own research.
           </Typography>
         </Grid>
         {props.results.map(gun => (
@@ -89,6 +97,7 @@ export default function ResultsContainer(props) {
   return (
     <Container>
       <Paper className={classes.paper}>
+
         {paperContent}
         <Button
           className={classes.button}

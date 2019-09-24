@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   questionArea: {
-    maxHeight: "75vh"
+    minHeight: "75vh",
+    overflow:'auto'
   }
 }));
 const useMobile = makeStyles(theme => ({

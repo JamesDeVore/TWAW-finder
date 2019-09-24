@@ -116,6 +116,8 @@ const responseProcessing = async (idealGun, gunData) => {
   //   eligibleGuns.length = 6;
   // }
   // console.log(eligibleGuns)
+  //add buget as a weight mechanism
+  //sort cals first, then sort by price and then put them all together
   return eligibleGuns
   
 }

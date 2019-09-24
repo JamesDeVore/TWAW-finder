@@ -53,10 +53,10 @@ const answers = {
     { text: '2.5" +', value: "4" }
   ],
   budget: [
-    { text: "$0-$300", value: 1 },
-    { text: "$301-$500", value: 2 },
-    { text: "$501-$700", value: 3 },
-    { text: "$701-$1000", value: 4 },
+    // { text: "$0-$300", value: 1 },
+    { text: "Up to $500", value: 2 },
+    { text: "Up To $750", value: 3 },
+    { text: "Up to $1000", value: 4 },
     { text: "Any Amount", value: 5 }
   ]
 };
