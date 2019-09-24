@@ -49,6 +49,7 @@ export default class Questions extends Component {
     this.setState({ progress: "during", currentQ: 0 });
   };
   answerQuestion = (answer, category) => {
+    window.scrollTo(0,0);
     //first, set the response in the state response object
   
     // a yes on question 4 means they need to skip #5

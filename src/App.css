@@ -186,6 +186,9 @@ body {
 }
 
 }
+button {
+    outline: 0 !important;
+}
 
 .gunResult{
   display: flex;
