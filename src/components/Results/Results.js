@@ -15,6 +15,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 const useStyles = makeStyles(theme => ({
   image: {
     height: 200,
+    
     margin: "auto"
   },
   button: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 const useMobile = makeStyles(theme => ({
   image: {
-    height: 200,
+    width:'80%',
     margin: "auto"
   },
   button: {

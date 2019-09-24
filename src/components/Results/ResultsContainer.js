@@ -13,15 +13,34 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 
 const useStyles = makeStyles(theme => ({
-  paper:{
-    marginTop:36
+  paper: {
+    marginTop: 36
+  },
+  button: {
+    textDecoration: "none",
+    padding: 8,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
   }
-}))
+}));
 const useMobile = makeStyles(theme => ({
   paper: {
-    marginTop:20,
-    position:'relative',
-    top:'50px'
+    
+    position: "relative",
+    top: "50px",
+    padding:24
+  },
+  button: {
+    textDecoration: "none",
+    padding: 8,
+    backgroundColor: "#552564",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#a348bf"
+    }
   }
 }));
 
@@ -54,7 +73,21 @@ export default function ResultsContainer(props) {
     );
       
   } else if (props.results.length === 0) {
-    paperContent =  <div>No results available</div>;
+    paperContent = (
+      <div>
+        <Typography variant="h2">We're sorry</Typography>
+        <Typography subtitle vaiant="p">
+          Your answers don't fit any gun we have in our database
+        </Typography>
+        <Divider />
+        <Button
+          className={classes.button}
+          onClick={() => window.location.reload()}
+        >
+          Start Over
+        </Button>
+      </div>
+    );
   } else {
     paperContent =  <div>Loading</div>;
   }

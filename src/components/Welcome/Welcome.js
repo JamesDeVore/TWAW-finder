@@ -10,11 +10,18 @@ import ListItem from "@material-ui/core/ListItem";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
+let headerImage = require('../../assets/headerImg.png')
+
 
 const useStyles = makeStyles(theme => ({
   image: {
     width: "100%",
-    height: "auto"
+    height: "auto",
+    // border: "1px solid grey",
+    borderRadius:5,
+    boxShadow:"1px 1px 5px 4px rgba(0,0,0,0.51)",
+    marginBottom:16
+
   },
   overlayContainer: {
     position: "relative"
@@ -29,14 +36,14 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
     padding: 22,
-    marginBottom:36
+    marginBottom: 36
   },
   startBtn: {
     textDecoration: "none",
-    padding:8,
+    padding: 8,
     backgroundColor: "#552564",
     color: "white",
-    marginBottom:36,
+    marginBottom: 36,
     "&:hover": {
       backgroundColor: "#a348bf"
     }
@@ -46,7 +53,10 @@ const useStyles = makeStyles(theme => ({
 const useMobile = makeStyles(theme => ({
   image: {
     width: "100%",
-    height: "auto"
+    height: "auto",
+    borderRadius: 5,
+    boxShadow: "1px 1px 5px 4px rgba(0,0,0,0.51)",
+    marginBottom: 16
   },
   overlayContainer: {
     position: "relative"
@@ -57,14 +67,17 @@ const useMobile = makeStyles(theme => ({
     left: "33%",
     color: "white"
   },
-  intro:{
-    fontSize:"1.2em"
+  intro: {
+    fontSize: "1.2em"
   },
   paper: {
+    position:'relative',
+    top:60,
     justifyContent: "center",
     alignItems: "center",
     padding: 22,
-    marginBottom: 36
+    overflow:'scroll',
+    minHeight:'100%'
   },
   startBtn: {
     textDecoration: "none",
@@ -94,22 +107,10 @@ export default function Welcome(props) {
             className={classes.gridRoot}
             alignItems="center"
           >
-            <Grid sm={12} item className={classes.overlayContainer}>
-              <img
-                className={classes.image}
-                src="https://thewellarmedwoman.com/wp-content/themes/woman/images/top.jpg"
-                alt=""
-              />
-              <Typography
-                justify="center"
-                variant="h4"
-                className={classes.overlay}
-              >
-                EDUCATE&nbsp; EQUIP&nbsp; EMPOWER
-              </Typography>
-            </Grid>
             <Grid item>
               <Paper className={classes.paper}>
+                  <img className={classes.image} src={headerImage} alt="" />
+ 
                 <Grid
                   container
                   justify="center"
@@ -117,11 +118,7 @@ export default function Welcome(props) {
                   alignItems="center"
                   alignContent="center"
                 >
-                  <Grid item sm={12}>
-                    <Typography gutterBottom variant="h3">
-                      My Gun Finder
-                    </Typography>
-                  </Grid>
+
                   <Grid item sm={8}>
                     <Typography
                       variant="subtitle1"

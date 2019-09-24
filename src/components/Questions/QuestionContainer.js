@@ -12,7 +12,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 const useStyles = makeStyles(theme => ({
   paper: {
     padding: 22,
-    minHeight: "80vh"
+    minHeight: "95vh"
   },
   root: {
     marginTop: 20
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   questionArea: {
-    minHeight: "75vh"
+    maxHeight: "75vh"
   }
 }));
 const useMobile = makeStyles(theme => ({

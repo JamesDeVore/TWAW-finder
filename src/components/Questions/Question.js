@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     margin:16
   },
   root:{
-    height:'75vh'
+    height:'60vh'
     }
 }));
 const useMobile = makeStyles(theme => ({
