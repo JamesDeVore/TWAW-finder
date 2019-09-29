@@ -5,7 +5,9 @@ const palmWidth = require('./questionImages/palmWidth.png')
 const thumbLength = require('./questionImages/thumbLength.png')
 const picatinnyRail = require('./questionImages/picatinnyRail.jpg')
 const thumbSafety = require('./questionImages/thumbSafety.png')
-const triggerFinger = require('./questionImages/triggerFinger.png') 
+const triggerFinger = require('./questionImages/triggerFinger.png')
+const homeDefense = require('./questionImages/homeDefense.png') 
+const carry = require('./questionImages/carry.png')
 let { 
     yesNoUnsure,
     scale,
@@ -22,7 +24,8 @@ const questions = {
     text: "What will this gun be used for?",
     subtext: "This will help determine the type of gun that best fits you.",
     answers: purpose,
-    category: "purpose"
+    category: "purpose",
+    image:homeDefense
   },
   1: {
     id: 1,
@@ -64,7 +67,8 @@ const questions = {
       "Do you have a reason you are not willing, or are not physically able to carry a gun on your body?",
     answers: yesNoUnsure,
     subtext: "",
-    category: "carry"
+    category: "carry",
+    image:carry
   },
   6: {
     id: 6,

@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   questionArea: {
-    minHeight: "75vh",
+    minHeight: "85vh",
     overflow:'auto'
   }
 }));
