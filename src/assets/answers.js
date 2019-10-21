@@ -32,7 +32,7 @@ const answers = {
     { text: "9mm", value: "9" },
     // { text: ".40", value: "40" }, // no more 40s
     { text: ".45", value: "45" },
-    { text: "Unsure", value: "Unsure" }
+    { text: "Open To Any", value: "Unsure" }
   ],
   palmRanges: [
     { text: 'Up to 2.5"', value: 2 },

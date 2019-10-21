@@ -22,20 +22,20 @@ const questions = {
   0: {
     id: 0,
     text: "What will this gun be used for?",
-    subtext: "This will help determine the type of gun that best fits you.",
+    subtext: "",
     answers: purpose,
     category: "purpose",
     image:homeDefense
   },
   1: {
     id: 1,
-    text: "Are you right handed or left handed?",
+    text: "Are you right-handed or left-handed?",
     answers: handed,
     category: "handedness"
   },
   2: {
     id: 2,
-    text: "Do you require a gun with an external gun safety?",
+    text: "Do you require an external gun safety?",
     subtext:
       "An external gun safety can be a grip safety, or thumb safety, to prevent any accidental firing of the gun",
     answers: yesNoUnsure,
@@ -46,7 +46,7 @@ const questions = {
     id: 3,
     text: "Do you require a gun with a laser?",
     subtext:
-      "A laser assists with aiming by allowing you to see where the gun in aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser. Selecting yes will take you directly to question 6",
+      "A laser assists with aiming by allowing you to see where the gun is aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser. Selecting yes will take you directly to question 6",
     answers: yesNoUnsure,
     category: "laser",
     image: laser
@@ -54,7 +54,7 @@ const questions = {
   4: {
     id: 4,
     text:
-      "Do you require a gun with an accessory rail to attach aftermarket accessories?",
+      "Do you require a gun with an accessory rail to attach after-market accessories?",
     answers: yesNoUnsure,
     subtext:
       "Aftermarket accessories can take the form of flashlights or lasers.",
@@ -64,7 +64,7 @@ const questions = {
   5: {
     id: 5,
     text:
-      "Do you have a reason you are not willing, or are not physically able to carry a gun on your body?",
+      "Do you have a reason you are not willing, or are not physically able, to carry a gun on your body?",
     answers: yesNoUnsure,
     subtext: "",
     category: "carry",
@@ -110,7 +110,7 @@ const questions = {
       "What is your palm length from the base of your palm to the bottom of your middle finger?",
     answers: palmRanges,
     subtext:
-      "This will help ensure your guns have a grip width that will allow the gun to fit comfortably in your hand",
+      "",
     category: "palmLength",
     image: palmLength
   },
@@ -125,9 +125,9 @@ const questions = {
   // },
   11: {
     id: 11,
-    text: "What is your trigger (index) finger Length?",
+    text: "What is your trigger finger Length?",
     subtext:
-      "This is the length of trigger finger from thumb web to the center of your outermost fingertip pad. This ensures your finger can safely and reliably reach the trigger of the gun.",
+      "",
     answers: triggerFingerRanges,
     category: "triggerFingerLength",
     image: triggerFinger

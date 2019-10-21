@@ -23,7 +23,7 @@ export default class Questions extends Component {
     super(props);
     this.state = {
       currentQ: 0,
-      progress: "during",
+      progress: "before",
       responses: {
         palmLength: null,
         palmWidth: null,

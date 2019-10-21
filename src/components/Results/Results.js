@@ -61,7 +61,7 @@ export default function Results(props) {
         className={classes.button}
         onClick={() => window.open(gun.Link, "_blank")}
       >
-        See Review
+        See Reviews
       </Button>
     );
   }
