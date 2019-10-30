@@ -8,11 +8,12 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   paper: {
     padding: 22,
-    minHeight: "95vh",
+    minHeight: "95vh"
   },
   root: {
     marginTop: 20
@@ -28,7 +29,10 @@ const useStyles = makeStyles(theme => ({
   },
   questionArea: {
     minHeight: "85vh",
-    overflow:'auto'
+    overflow: "auto"
+  },
+  warningFont:{
+    fontSize:"0.6em"
   }
 }));
 const useMobile = makeStyles(theme => ({
@@ -97,6 +101,9 @@ export default function QuestionContainer(props) {
               answer={props.answerQuestion}
               number={props.currentQ}
             />
+          </Grid>
+          <Grid item>
+            <Typography className={classes.warningFont} variant="p">Please refrain from hitting the back button on your browser or refreshing the page to avoid losing your progress</Typography>
           </Grid>
         </Grid>
       </Paper>

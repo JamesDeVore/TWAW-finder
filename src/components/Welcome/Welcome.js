@@ -140,12 +140,9 @@ export default function Welcome(props) {
                     <hr />
                     <List className={classes.intro}>
                       <ListItem>
-                        Help you determine the right gun for your needs
+                        To help you narrow down gun model options based on your personal characteristics and preferences.
                       </ListItem>
-                      <ListItem>
-                        Help you think about what properties to look for in your
-                        gun.
-                      </ListItem>
+
                     </List>
                     <Typography variant="h4">
                       What this tool is NOT designed to do:
@@ -153,10 +150,7 @@ export default function Welcome(props) {
                     <hr />
                     <List className={classes.intro}>
                       <ListItem>
-                        Be the final say in the guns you can buy
-                      </ListItem>
-                      <ListItem>
-                        Limit you to the guns we show and ONLY the ones we show
+                        Provide definitive firearm options, these are suggestions only 
                       </ListItem>
                     </List>
                   </Grid>

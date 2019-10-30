@@ -37,7 +37,7 @@ const questions = {
     id: 2,
     text: "Do you require an external gun safety?",
     subtext:
-      "An external gun safety can be a grip safety, or thumb safety, to prevent any accidental firing of the gun",
+      "An external gun safety can be a grip safety, or a thumb safety, to prevent any accidental firing of the gun.",
     answers: yesNoUnsure,
     category: "externalSafety",
     image: thumbSafety
@@ -46,7 +46,7 @@ const questions = {
     id: 3,
     text: "Do you require a gun with a laser?",
     subtext:
-      "A laser assists with aiming by allowing you to see where the gun is aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser. Selecting yes will take you directly to question 6",
+      "A laser assists with aiming by allowing you to see where the gun is aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser (aftermarket lasers can also be purchased). Selecting yes will take you directly to question 6",
     answers: yesNoUnsure,
     category: "laser",
     image: laser
@@ -125,7 +125,7 @@ const questions = {
   // },
   11: {
     id: 11,
-    text: "What is your trigger finger Length?",
+    text: "What is the length from the center of the web of your thumb to the of center of the uppermost trigger finger pad",
     subtext:
       "",
     answers: triggerFingerRanges,
@@ -134,7 +134,7 @@ const questions = {
   },
   12: {
     id: 12,
-    text: "What is the length of your dominant thumb?",
+    text: "What is the length of your dominant thumb, from the center of the web of the thumb to the center of the uppermost thumb pad?",
     subtext: "",
     answers: thumbRanges,
     category: "thumbLength",
@@ -143,7 +143,7 @@ const questions = {
   13: {
     id: 13,
     text:
-      "What will your budget allow for you to spend on the right gun for self-defense?",
+      "What will your budget allow you to spend on the right gun for self-defense?",
     answers: budget,
     category: "budget"
   }

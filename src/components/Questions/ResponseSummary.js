@@ -53,52 +53,55 @@ export default function ResponseSummary(props) {
     if (matches) {
       classes = mobile;
     }  return (
-    <Container>
-      <Paper className={classes.paper}>
-        <Grid container direction="column">
-          <Grid container item direction="column" alignItems="center">
-            <Grid item>
-              <Typography gutterBottom variant="h2">
-                Finished!
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Divider />
-            <Typography variant="h4">
-              Here is a summary of your responses
-            </Typography>
-            <List dense>
-              {Object.keys(props.questions).map((questionObjNum, i) => {
-                let resp =
-                  props.responses[
-                    props.questions[questionObjNum]["category"]
-                  ];
-                resp = resp === null ? "Unsure" : resp;
-                return (
-                  <ListItem>
-                    <ListItemText
-                      primary={`${i + 1} - ${
-                        props.questions[questionObjNum].text
-                      }`}
-                      secondary={`Response:
+         <Container>
+           <Paper className={classes.paper}>
+             <Grid container direction="column">
+               <Grid container item direction="column" alignItems="center">
+                 <Grid item>
+                   <Typography gutterBottom variant="h2">
+                     Finished!
+                   </Typography>
+                 </Grid>
+               </Grid>
+               <Grid item>
+                 <Divider />
+                 <Typography variant="h4">
+                   Here is a summary of your responses!
+                 </Typography>
+                 <Typography subtitle variant="h6">
+                   Verify your answers and submit below to see your recommendations 
+                 </Typography>
+                 <List dense>
+                   {Object.keys(props.questions).map((questionObjNum, i) => {
+                     let resp =
+                       props.responses[
+                         props.questions[questionObjNum]["category"]
+                       ];
+                     resp = resp === null ? "Unsure" : resp;
+                     return (
+                       <ListItem>
+                         <ListItemText
+                           primary={`${i + 1} - ${
+                             props.questions[questionObjNum].text
+                           }`}
+                           secondary={`Response:
                         ${resp}`}
-                    />
-                  </ListItem>
-                );
-              })}
-            </List>
-          </Grid>
-          <Grid item>
-            <Button
-              onClick={() => props.handleSubmit()}
-              className={classes.submitButton}
-            >
-              Submit Quiz
-            </Button>
-          </Grid>
-        </Grid>
-      </Paper>
-    </Container>
-  );
+                         />
+                       </ListItem>
+                     );
+                   })}
+                 </List>
+               </Grid>
+               <Grid item>
+                 <Button
+                   onClick={() => props.handleSubmit()}
+                   className={classes.submitButton}
+                 >
+                   Submit Quiz
+                 </Button>
+               </Grid>
+             </Grid>
+           </Paper>
+         </Container>
+       );
 }

@@ -68,12 +68,12 @@ export default function Intro(props) {
             <Typography paragraph variant="subtitle1">
               This quiz will take about 10-15 minutes, and will require you to
               know some hand measurements. Before we begin, make sure you have a
-              ruler or some way to measure your hand
+              ruler or some way to measure your hand.
             </Typography>
             <Divider />
             <Typography paragraph variant="subtitle1">
               Please refrain from refreshing the page, as you will lose your
-              progress and need to start over
+              progress and need to start over.
             </Typography>
           </Grid>
           <Grid item xs={8}>

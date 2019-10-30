@@ -13,6 +13,9 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
+var sendmail = require("sendmail")({ silent: true });
+
+
 const useStyles = makeStyles(theme => ({
   paper: {
     marginTop: 36,
@@ -63,7 +66,21 @@ export default function ResultsContainer(props) {
     setEmail(event.target.value)
   }
   const submitEmail = () => {
-    //send email hered
+    //send email here
+    
+    sendmail(
+      {
+        from: "test@yourdomain.com",
+        to: "jdevore4592@gmail.com",
+        replyTo: "jason@yourdomain.com",
+        subject: "MailComposer sendmail",
+        html: "Mail of test sendmail "
+      },
+      function(err, reply) {
+        console.log(err && err.stack);
+        console.dir(reply);
+      }
+    );
   }
   let paperContent = null;
   if (props.results.length > 0) {
@@ -113,7 +130,7 @@ export default function ResultsContainer(props) {
       <Paper className={classes.paper}>
         {paperContent}
         <br />
-        <Grid container justify="center" alignItems="center">
+        <Grid container justify="center" alignItems="center" spacing={3}>
           <Divider />
           <Grid item xs={8}>
             <Typography variant="h3">Save your results!</Typography>
@@ -124,7 +141,7 @@ export default function ResultsContainer(props) {
           <Divider />
           <Grid item xs={8}>
             <Input value={email} onChange={handleInput}></Input>
-            <Button className ={classes.button}>Send Results</Button>
+            <Button className ={classes.button} onClick={submitEmail()}>Send Results</Button>
           </Grid>
         </Grid>
         <Button
