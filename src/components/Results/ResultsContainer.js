@@ -138,11 +138,7 @@ export default function ResultsContainer(props) {
               Enter your email and we will send you the results
             </Typography>
           </Grid>
-          <Divider />
-          <Grid item xs={8}>
-            <Input value={email} onChange={handleInput}></Input>
-            <Button className ={classes.button} onClick={submitEmail()}>Send Results</Button>
-          </Grid>
+
         </Grid>
         <Button
           className={classes.button}
