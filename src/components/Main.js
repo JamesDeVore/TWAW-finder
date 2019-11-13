@@ -13,10 +13,6 @@ import responseProcessing from "../utils/ResponseProcessing";
 import Papa from "papaparse";
 
 //material components
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
-import Button from "@material-ui/core/Button";
 
 export default class Questions extends Component {
   constructor(props) {

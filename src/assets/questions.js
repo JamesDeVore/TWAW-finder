@@ -25,7 +25,7 @@ const questions = {
     subtext: "",
     answers: purpose,
     category: "purpose",
-    image:homeDefense
+    image: homeDefense
   },
   1: {
     id: 1,
@@ -46,7 +46,7 @@ const questions = {
     id: 3,
     text: "Do you require a gun with a laser?",
     subtext:
-      "A laser assists with aiming by allowing you to see where the gun is aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser (aftermarket lasers can also be purchased). Selecting yes will take you directly to question 6",
+      "A laser assists with aiming by allowing you to see where the gun is aimed before pulling the trigger. Selecting yes will select guns that come factory-equipped with a laser (aftermarket lasers are available for most gun models and can be and mounted after the purchase of your gun). Selecting yes will take you directly to question 6",
     answers: yesNoUnsure,
     category: "laser",
     image: laser
@@ -66,9 +66,10 @@ const questions = {
     text:
       "Do you have a reason you are not willing, or are not physically able, to carry a gun on your body?",
     answers: yesNoUnsure,
-    subtext: "",
+    subtext:
+      "On-the-body carry is THE safest and best way to carry your firearm and is ALWAYS recommended and preferred. Only select Yes if you physically cannot carry on your body or if you are unwilling to carry on the body, you understand the risks and responsibilities of carrying off body.",
     category: "carry",
-    image:carry
+    image: carry
   },
   6: {
     id: 6,
@@ -109,8 +110,7 @@ const questions = {
     text:
       "What is your palm length from the base of your palm to the bottom of your middle finger?",
     answers: palmRanges,
-    subtext:
-      "",
+    subtext: "",
     category: "palmLength",
     image: palmLength
   },
@@ -125,20 +125,21 @@ const questions = {
   // },
   11: {
     id: 11,
-    text: "What is the length from the center of the web of your thumb to the of center of the uppermost trigger finger pad",
-    subtext:
-      "",
+    text:
+      "What is the length from the center of the web of your thumb to the of center of the uppermost trigger finger pad",
+    subtext: "",
     answers: triggerFingerRanges,
     category: "triggerFingerLength",
     image: triggerFinger
   },
   12: {
     id: 12,
-    text: "What is the length of your dominant thumb, from the center of the web of the thumb to the center of the uppermost thumb pad?",
+    text:
+      "What is the length of your dominant thumb, from the center of the web of the thumb to the center of the uppermost thumb pad?",
     subtext: "",
     answers: thumbRanges,
     category: "thumbLength",
-    image:thumbLength
+    image: thumbLength
   },
   13: {
     id: 13,

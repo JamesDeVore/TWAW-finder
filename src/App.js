@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader/root";
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import NavBar from './components/Welcome/NavBar'
@@ -23,4 +24,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(App);
