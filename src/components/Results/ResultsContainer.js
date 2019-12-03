@@ -1,13 +1,13 @@
 import React from "react";
 import Result from "./Results";
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import CardActions from "@material-ui/core/CardActions";
 import Divider from "@material-ui/core/Divider";
-import Input from "@material-ui/core/Input"
+import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -15,11 +15,10 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 var sendmail = require("sendmail")({ silent: true });
 
-
 const useStyles = makeStyles(theme => ({
   paper: {
     marginTop: 36,
-    padding:24
+    padding: 24
   },
   button: {
     textDecoration: "none",
@@ -58,30 +57,42 @@ export default function ResultsContainer(props) {
     classes = mobile;
   }
   useEffect(() => {
-      window.scrollTo(0, 0);
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
-  const handleInput = (event) => {
+  const handleInput = event => {
     //validation stuff here I guess
-    setEmail(event.target.value)
-  }
+    setEmail(event.target.value);
+  };
   const submitEmail = () => {
     //send email here
-    
-    sendmail(
-      {
-        from: "test@yourdomain.com",
-        to: "jdevore4592@gmail.com",
-        replyTo: "jason@yourdomain.com",
-        subject: "MailComposer sendmail",
-        html: "Mail of test sendmail "
-      },
-      function(err, reply) {
-        console.log(err && err.stack);
-        console.dir(reply);
-      }
-    );
-  }
+    let emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailReg.test(email)) {
+      //success
+      let guns = props.results.map(gunObj => gunObj.GUN.replace(/&/g," and "));
+      let links = props.results.map(gunObj => gunObj.Link.replace(/&/g," and "));
+      let queryString = `?email=${email}&guns=${guns.join(
+        ","
+      )}&gunLinks=${links.join(",")}`;
+      let fetchOpts = {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors",
+        
+      };
+      fetch(
+        `https://przkixru10.execute-api.us-east-1.amazonaws.com/v2/send/${queryString}`
+        ,fetchOpts
+      ).then(data => {
+        if(data){
+          alert("Email sent Successfully!")
+          setEmail("")
+        }
+      })
+      .catch(err => alert("Something went wrong sending the email"))
+    } else {
+      alert("Sorry, but the email you entered is invalid, please try again");
+    }
+  };
   let paperContent = null;
   if (props.results.length > 0) {
     paperContent = (
@@ -109,7 +120,6 @@ export default function ResultsContainer(props) {
             <Result gun={gun} />
           </Grid>
         ))}
-
       </Grid>
     );
   } else if (props.results.length === 0) {
@@ -130,15 +140,35 @@ export default function ResultsContainer(props) {
       <Paper className={classes.paper}>
         {paperContent}
         <br />
-        <Grid container justify="center" alignItems="center" spacing={3}>
+        <Grid
+          container
+          direction="column"
+          justify="center"
+          alignItems="center"
+          spacing={3}
+        >
           <Divider />
           <Grid item xs={8}>
             <Typography variant="h3">Save your results!</Typography>
             <Typography variant="p" subtitle>
               Enter your email and we will send you the results
             </Typography>
+            <Grid item xs={8}>
+              <Input
+                type="email"
+                value={email}
+                fullWidth
+                placeholder="Enter Email Here"
+                onChange={handleInput}
+              ></Input>
+            </Grid>
+            <br />
+            <Grid item xs={8}>
+              <Button onClick={submitEmail} className={classes.button}>
+                Email
+              </Button>
+            </Grid>
           </Grid>
-
         </Grid>
         <Button
           className={classes.button}
