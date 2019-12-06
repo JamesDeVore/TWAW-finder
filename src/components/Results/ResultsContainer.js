@@ -163,11 +163,11 @@ export default function ResultsContainer(props) {
               ></Input>
             </Grid>
             <br />
-            <Grid item xs={8}>
+            {/* <Grid item xs={8}>
               <Button onClick={submitEmail} className={classes.button}>
                 Email
               </Button>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
         <Button
