@@ -2,12 +2,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import React, { Component } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPinterest } from "@fortawesome/free-solid-svg-icons";
 
   const useStyles = makeStyles(theme => ({
     appBar: {

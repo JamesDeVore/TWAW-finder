@@ -1,7 +1,6 @@
 import React from "react";
 import SelectButtons from "./answerTypes/Select";
 
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -105,27 +104,10 @@ export default function Question(props) {
       <Grid item xs={matches? 10:4} container={matches} justify='center'>
         <img src={image} className={classes.image} />
       </Grid>
-      <Grid item className={classes.answers} wrap='no-wrap' container justify="flex-start" item xs={10}>
+      <Grid className={classes.answers} wrap='no-wrap' container justify="flex-start" item xs={10}>
         {allAnswers()}
       </Grid>
     </Grid>
   );
 }
 
-/*=====================================================
-
-    <div className="row justify-content-center questionBox questionBox-before">
-      <div className="col-10 questionTitle">
-        <h1>Question #{number + 1}</h1>
-      </div>
-      <div className="col-6 questionText">
-        <h3 className="questionMainText">{text}</h3>
-        <p className="questionSubtext">{subtext}</p>
-      </div>
-      <div className="col-4">
-        <img className="questionImg" src={image} />
-      </div>
-      <div className="col-md-8 answersDiv">{allAnswers()}</div>
-    </div>
-  
-=====================================================*/

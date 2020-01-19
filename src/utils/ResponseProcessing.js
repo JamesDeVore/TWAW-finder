@@ -1,5 +1,3 @@
-import * as fs from "fs";
-// const csv = require('csvtojson');
 
 const responseProcessing = async (idealGun, gunData) => {
   console.log(idealGun);
@@ -21,12 +19,10 @@ const responseProcessing = async (idealGun, gunData) => {
       armStrength,
       carry,
       purpose,
-      standardLaser,
       fingerStrength,
       accessoryRail,
       triggerFingerLength,
       thumbLength,
-      palmLength,
       laser,
       handStrength
     } = idealGun;

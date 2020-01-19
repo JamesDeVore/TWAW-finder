@@ -1,7 +1,6 @@
 import answers from './answers'
 const laser = require('./questionImages/laser.png');
 const palmLength = require('./questionImages/palmLength.png')
-const palmWidth = require('./questionImages/palmWidth.png')
 const thumbLength = require('./questionImages/thumbLength.png')
 const picatinnyRail = require('./questionImages/picatinnyRail.jpg')
 const thumbSafety = require('./questionImages/thumbSafety.png')

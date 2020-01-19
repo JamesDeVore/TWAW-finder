@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import CardMedia from "@material-ui/core/CardMedia"
@@ -92,7 +91,7 @@ export default function Results(props) {
           style={{ height: 200, paddingTop: 0 }}
           title={gun.GUN}
         >
-          <img src={gun["Image Links"]} className={classes.image} />
+          <img src={gun["Image Links"]} className={classes.image} alt={gun.GUN} />
         </CardMedia>
         <List>
           <ListItem>Manufacturer: {gun.Manufacturer}</ListItem>

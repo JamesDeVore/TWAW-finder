@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import questions from "../assets/questions";
-import Question from "./Questions/Question";
-import Result from "./Results/Results";
 import ResponseSummary from "./Questions/ResponseSummary";
 import Intro from "./Questions/Intro";
-import { makeStyles } from "@material-ui/core/styles";
 import QuestionContainer from "./Questions/QuestionContainer";
 import ResultsContainer from "./Results/ResultsContainer";
 //utils
@@ -95,7 +92,7 @@ export default class Questions extends Component {
     });
   };
   goBack = () => {
-    this.setState({ currentQ: (this.state.currentQ -= 1) });
+    this.setState({ currentQ: (this.state.currentQ) - 1 });
   };
 
   render() {

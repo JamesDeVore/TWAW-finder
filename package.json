@@ -11,6 +11,7 @@
     "bootstrap": "^4.3.1",
     "copy-webpack-plugin": "^5.0.4",
     "drip-nodejs": "^2.1.2",
+    "emailjs-com": "^2.4.1",
     "fs": "0.0.1-security",
     "google-spreadsheet": "^2.0.8",
     "googleapis": "^39.2.0",
@@ -44,7 +45,9 @@
     "npm": "5.7.1",
     "node": "9.5.0"
   },
-  "babel":{
-     "plugins": ["react-hot-loader/babel"]
+  "babel": {
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
   }
 }
