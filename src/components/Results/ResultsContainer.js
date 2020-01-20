@@ -76,7 +76,7 @@ export default function ResultsContainer(props) {
             gun for yourself. We encourage you to try the suggested models at a
             local shooting range if possible and be sure to conduct additional
             research on your own.
-            <Box fontWeight="bold">Please ensure to take a screenshot, write down your results, or bookmark the review pages as your results will not saved.</Box>
+            <Box fontWeight="bold">Please ensure to take a screenshot, write down your results, or bookmark the review pages as your results will not be saved.</Box>
           </Typography>
         </Grid>
         {props.results.map(gun => (
