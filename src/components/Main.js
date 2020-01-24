@@ -8,6 +8,8 @@ import ResultsContainer from "./Results/ResultsContainer";
 import responseProcessing from "../utils/ResponseProcessing";
 
 import Papa from "papaparse";
+import ReactGA from "react-ga";
+
 
 //material components
 
@@ -43,17 +45,32 @@ export default class Questions extends Component {
   };
   answerQuestion = (answer, category) => {
     window.scrollTo(0,0);
+    console.log(answer)
+
+    if(Array.isArray(answer)){
+      answer = {value:answer,text:answer}
+    }
     //first, set the response in the state response object
+    console.log(JSON.stringify(process.env.REACT_APP_GA_ID));
+        ReactGA.initialize(process.env.REACT_APP_GA_ID);
+        ReactGA.pageview("/test/");
+
+          ReactGA.event({
+            category: "Gun-Finder",
+            action: category,
+            label: JSON.stringify(answer.text)
+          });
+
   
     // a yes on question 4 means they need to skip #5
     let skipValue = 1
     
-    if(this.state.currentQ === 3 && answer){
+    if(this.state.currentQ === 3 && answer.value){
       skipValue = 2
     }
 
     let oldState = { ...this.state.responses };
-    oldState[category] = answer;
+    oldState[category] = answer.value;
     this.setState({ responses: oldState });
 
     let { currentQ } = this.state;
@@ -64,7 +81,27 @@ export default class Questions extends Component {
       this.setState({ progress: "end" });
     }
   };
+  trackAnswers = () => {
+         // console.log("hi")
+    ReactGA.initialize("UA-41718148-1");
+    //ReactGA.pageview("/hey/");
+
+    Object.keys(this.state.responses).forEach(response => {
+      ReactGA.event({
+        category: "Gun-Finder",
+        action: response.toString(),
+        label: JSON.stringify(this.state.responses[response])
+      });
+    })
+    // ReactGA.event({
+    //   category: "category",
+    //   action: "action",
+    //   label:"label",
+    //   value:"value"
+    // });
+  }
   handleSubmit = async () => {
+    this.trackAnswers();
     var csvFilePath = require("../assets/GunData.csv");
     Papa.parse(csvFilePath, {
       download: true,

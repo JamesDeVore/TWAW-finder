@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import ReactGA from 'react-ga';
 
 
 const useStyles = makeStyles(theme => ({
@@ -55,10 +56,19 @@ export default function Results(props) {
   let{gun} = props
   let storeButton = null
   if(gun.Link){
+
     storeButton = (
       <Button
         className={classes.button}
-        onClick={() => window.open(gun.Link, "_blank")}
+        onClick={() => {
+              ReactGA.initialize(process.env.REACT_APP_GA_ID);
+              ReactGA.event({
+                category: "Gun-Finder",
+                action: "reviewLink",
+                label: JSON.stringify(gun.GUN)
+              });
+          window.open(gun.Link, "_blank")
+        }}
       >
         See Reviews
       </Button>

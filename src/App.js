@@ -4,11 +4,20 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import NavBar from './components/Welcome/NavBar'
 import Welcome from './components/Welcome/Welcome'
 import Questions from './components/Main'
+import ReactGA from 'react-ga';
+
 
 import './App.css';
 
 class App extends Component {
+
+
+  componentDidMount = () => {
+    ReactGA.initialize(process.env.REACT_APP_GA_ID);
+    ReactGA.pageview(window.location.pathname);
+  }
   render() {
+
     return (
       <Fragment>
         <NavBar />

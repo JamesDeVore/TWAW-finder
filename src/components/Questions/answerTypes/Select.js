@@ -14,6 +14,7 @@ export default class SelectButtons extends Component {
     this.setState({selectedCals:["Unsure"]})
   }
   handleClick = value => {
+    debugger
     let { selectedCals } = this.state;
     let found = selectedCals.find(cal => value === cal);
     if (!found) {

@@ -81,7 +81,7 @@ export default function Question(props) {
           <Button
             className={classes.answerButton}
             onClick={() => {
-              props.answer(answer.value, category);
+              props.answer(answer, category);
             }}
           >
             {answer.text}

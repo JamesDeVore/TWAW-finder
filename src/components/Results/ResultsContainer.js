@@ -104,6 +104,8 @@ export default function ResultsContainer(props) {
       <Paper className={classes.paper}>
         {paperContent}
         <br />
+        <Grid></Grid>
+
         <Grid
           container
           direction="column"
@@ -111,6 +113,21 @@ export default function ResultsContainer(props) {
           alignItems="center"
           spacing={3}
         >
+          <Grid item>
+            <Typography subtitle variant="p">
+              These results are only recommendations and based on the answers
+              you selected in the quiz. The Well Armed Woman Gun Finder database
+              is not all-inclusive to every gun model. The Well Armed Woman LLC
+              is only supplying a suggested list and only you can determine the
+              right gun for yourself. We encourage you to try the suggested
+              models at a local shooting range if possible and be sure to
+              conduct additional research on your own.
+              <Box fontWeight="bold">
+                Please ensure to take a screenshot, write down your results, or
+                bookmark the review pages as your results will not be saved.
+              </Box>
+            </Typography>
+          </Grid>
           <Divider />
         </Grid>
         <Button
